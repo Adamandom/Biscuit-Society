@@ -23,23 +23,21 @@
 
         .section_Div li {
             display: inline-block;
-            position: absolute;
+            position: relative;
             background:#cd5752;
             width: 50em;
             height: 20em;
-            margin: 0 auto;
             border-radius: 2em;
         }
         
         .section_Title {
-            display: grid;
-            
+            display: block;
             margin: 0.25em 0 0 0.75em;
             font-family: 'Ranga', serif;
             font-size: 4em;
             font-weight: 500;
             color: #ffc040;
-            width: 50%;
+            max-width: 50%;
         }
 
         .section_Text {
@@ -48,7 +46,7 @@
             margin: 0 0 0 2em;
             text-align: left;
             word-wrap: break-word;            
-            width: 50%;
+            width: 40%;
             font-family: 'Montserrat', sans-serif;
             
             font-size: 2em;
@@ -56,12 +54,9 @@
         }
 
         .section_Icon {
-            float: right;
-            display: inline;
-            margin: 4em 5em 0 0;
+            position: absolute;
             width: 12em;
             height: 12em;
-            transform: translateY(-50%);
             transition: 1s;
         }
 
