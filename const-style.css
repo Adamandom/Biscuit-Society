@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    /* gets rid of default value */
+    background: #41251d;
+}
+
+/* combining repeated CSS */
+
+header,
+nav,
+.sectionLeft,
+.sectionRight,
+.dropDown,
+footer {
+    margin: 0;
+    display: grid;
+}
+
+/* header style */
+header {
+    position: relative;
+    z-index: 1;
+    margin: 2vh auto;
+    height: 20em;
+    width: 100em;
+    box-shadow: 0 2vh 25px rgb(32, 14, 11);
+    overflow: hidden;
+    border-radius: 5em;
+}
+
+.header_Main {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    height: 20em;
+    width: 160em;
+}
+
+.header_Socials {
+    position: absolute;
+    margin: auto;
+    transform: translateY(-50%);
+    top: 10em;
+    z-index: 2;
+    height: 7em;
+    width: 7em;
+    transition: 200ms;
+}
+
+.header_Socials:active {
+    filter: saturate(5);
+}
+
+header a {
+    position: absolute;
+    z-index: 2;
+}
+
+/* Nav - position of specific tabs changed inline */
+
+nav {
+    position: relative;
+    top: -13em;
+    margin: 0 auto;
+    height: 12em;
+    width: 70em;
+}
+
+nav ul {
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    position: absolute;
+    display: inline;
+}
+
+.nav_Tab,
+.nav_HomeTab {
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 20em;
+    transition: 500ms;
+    box-shadow: #41251d 0 0.5em 1em;
+    border-radius: 2em;
+}
+
+.nav_HomeTab {
+    top: 2em;
+}
+
+.nav_Tab:hover {
+    top: 3em;
+}
+
+.nav_HomeTab:hover {
+    top: 5em;
+}
+
+/* 
+    FOOTER 
+        contains styling for the footer which is consistent across all pages
+        be sure to change the position of the <span> in the HTML to cover your name on pages you created
+*/
+
+footer {
+    background: #eec062;
+    border-radius: 50px;
+    margin: 4vh auto;
+    height: 3em;
+    width: 110em;
+}
+
+footer p {
+    color: rgb(32, 14, 11);
+    margin: auto;
+    font-family: Montserrat;
+    font-size: 2em;
+}
+
+footer span {
+    color: #cd5752;
+}

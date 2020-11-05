@@ -1,0 +1,302 @@
+       
+        /* serves as the introduction to the page; contains graphic and flavor text */
+        .intro_Div {
+            position: relative;
+            z-index: -2;
+            display: grid;
+            height: 10em;
+            width: 80em;
+            background: #eec062;
+            border-radius: 2.5em;
+            margin: -6em auto 4em;
+        }
+        
+        /* Review Section - contains reviews (what a twist!) */
+
+        .review_Section {
+            position: relative;
+            z-index: 0;
+            display: grid;
+            min-height: 80em;
+            width: 60em;
+            background: #eec062;
+            border-radius: 5em;
+            margin: 0 auto;
+        }
+
+        .review_Section h1 {
+            font-family: montserrat;
+            font-weight: 500;
+            display: grid;
+            text-align: center;
+            margin: 0.5em auto 0;
+            max-height: 3em;
+            font-size: 2em;
+        }
+
+        .review_Section h2 {
+            font-size: 1em;
+            font-family: montserrat;
+            display: inline;
+            margin: -1em auto 0;
+        }
+
+        .review_Section img {
+            height: 8em;
+            width: 8em;
+            display: grid;
+            margin: -1em auto 0;
+            transition: 500ms;
+        }
+
+        .review_Headline:hover {
+            transform: scale(1.4);
+            box-shadow: #2c0907 0 0 1em;
+        }
+
+        .review_Div {
+            position: relative;
+            display: grid;
+            height: 25em;
+            width: 55em;
+            border-radius: 2.5em;
+            margin: 0em 0 0 2.5em;
+        }
+
+        .review_Headline {
+            position: absolute;
+            z-index: 2;
+            border: #2c0907 solid 0.25em;
+            display: grid;
+            height: 20em;
+            width: 20em;
+            background: #f7d299;
+            border-radius: 2.5em;
+            margin: 2.25em auto;
+
+            transition: 500ms;
+        }
+
+        #review_Headline_right {
+            right:0;
+        }
+
+        .review_Body {
+            position: absolute;
+            opacity: 0.75;
+            z-index: 1;
+            display: grid;
+            height: 15em;
+            width: 50em;
+            background: #cd5753;
+            border-radius: 2.5em;
+            margin: 4.75em 2em;
+            border: #f1e5e5 solid 0.25em;
+            transition: 500ms;
+        }
+
+        .review_Body p {
+            padding: 0.5em 4em;
+            color: white;
+            font-family: montserrat;
+            text-align: left;
+            font-weight: 100;
+            max-width: 80%;
+            max-height: 80%;
+            font-size: 1.2em;
+        }
+
+        #review_Body_left {
+
+        }
+
+        #review_Body_right:hover {
+            margin-left: 18em;
+            opacity: 1;
+        }
+        #review_Body_left:hover {
+            margin-left: -14em;
+            opacity: 1;
+        }
+
+
+
+        /* 
+        Review Form Section 
+            This section contains styling for the form that users can fill out if they want to
+            leave their own review.
+
+            Users will input their:
+                Title
+                Subheading
+                Name
+                main body text of their review
+                a score
+                an image file of the biscuit in question
+        */
+
+        .form_Section {
+            position: relative;
+            display: grid;
+            background-color: #eec062;
+            margin: 4em auto;
+
+            max-height: 200em;
+
+            width: 80em;
+            
+            border-radius: 50px;
+
+            transition: 1s;
+        }
+
+        .form_Section h1 {
+            font-family: montserrat;
+            display: grid;
+            margin: auto;
+            padding: 1em 0 0.5em;
+            color: #41241c;
+            font-size: 5em;
+        }
+        form {
+            font-family: montserrat;
+            display: grid;
+            margin: 0 auto;
+        }
+
+        .textInput {
+            margin: 0 auto 1em;
+            background: #cd5753;
+            color:#f1e5e5;
+            font-size: 1.5em;
+            font-family: montserrat;
+            border-radius: 5em;
+            text-indent: 1em;
+            border: none;
+            height: 2em;
+            width: 15em;
+            outline: none;
+        }
+        ::placeholder {
+            color:#f1e5e5;
+            opacity: 0.5;
+        }
+
+        #reviewReview {
+            background: #cd5753;
+            margin: 0 auto 1em;
+            height: 5em;
+            width: 30em;
+            font-size: 1.5em;
+            font-family: montserrat;
+            padding: 1em;
+            color: #f1e5e5;
+            outline: none;
+            border: none;
+            border-radius: 2em;
+            resize: none;
+        }
+
+        form label {
+            display: grid;
+            margin: 0 auto 0.5em;
+        }
+
+        #reviewScore {
+            appearance: none;
+            margin: 0 auto;
+            display: grid;
+            width: 30em;
+            height: 4em; 
+            background: #cd5753; 
+            overflow: hidden;
+            outline: none; 
+            border-radius: 2em;
+            cursor: pointer;
+            transition: 300ms;
+        }
+
+        #currentScore {
+            margin: 0.5em auto 1em;
+            display: grid;
+            font-size: 2em;
+        }
+  
+        /* the code for the slider is a modified version of an example from
+        w3schools */
+        #reviewScore::-webkit-slider-thumb,
+        #reviewScore::-webkit-slider-thumb {
+            appearance: none;
+            width: 3em;
+            height: 3em; 
+            border-radius: 2em;
+            background: #f1e5e5;
+        }
+
+        #reviewImage_container {
+            position: relative;
+            display: grid;
+            margin: 0 auto;
+            height: 7em;
+            width: 12em;
+            background: #cd5753;
+            border-radius: 2em;
+            color: #f1e5e5;
+            border: solid #2c0907 0.25em;    
+            transition: 500ms;        
+        }
+        #reviewImage_container:hover {
+            background: #ec8e4f;
+            box-shadow: 0 0 0.5em #ec8e4f;
+            border: solid rgb(229, 236, 208) 0.25em;
+        }
+
+        #reviewImage_container h3 {
+            color: #f1e5e5;
+            text-align: center;
+        }
+
+        form h3 {
+            margin: 1em auto 1em;
+        }
+
+        #reviewImage {
+            margin: 0 auto;
+            position: absolute;
+            opacity: 0;
+            height: 9em;
+            width: 14em;
+            outline: none;
+            display: inline;
+            cursor: pointer;
+        }
+
+        #reviewSubmit {
+            margin: 1em auto 0;
+            height: 5em;
+            width: 10em;
+            background: #cd5753;
+            font-size: 2em;
+            font-family: montserrat;
+            padding: 1em;
+            color: #ffffff;
+
+            outline: none;
+            border: solid #2c0907 0.25em;
+            border-radius: 5em;
+
+            cursor: pointer;
+            transition: 300ms;
+        }
+
+        #reviewSubmit:hover {
+            background: #4ee630;
+            border: solid rgb(229, 236, 208) 0.25em;
+            box-shadow: 0 0 0.5em #4ee630;
+
+        }
+    
+
+        
+
+        
