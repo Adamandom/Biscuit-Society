@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <!-- Type faces imported from Google Fonts (note: all fonts are OPEN SOURCE)-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ranga">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" >
+        <!-- A structured typeface for main bodies of text-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" >
+        <!-- A playful typeface for Titles-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
     
     <!-- CSS Style Sheet for Home Page -->
     <link rel="stylesheet" href="review-style.css">
@@ -23,9 +25,9 @@
     <!-- Header - consists of an SVG with other SVG icons for social media layered on top-->
     <header>
         <img src="Header.svg" alt="Header" class="header_Main">
-        <a href="twitter.com"><img src="SocialIcon1.svg" alt="twitter" style="left: 67em" class="header_Socials"></a>
-        <a href="facebook.com"><img src="SocialIcon2.svg" alt="facebook" style="left: 77em" class="header_Socials"></a>
-        <a href="instagram.com"><img src="SocialIcon3.svg" alt="instagram" style="left: 87em" class="header_Socials"></a>
+        <a href="#facebook"><img src="SocialIcon1.svg" alt="facebook" style="left: 67em" class="header_Socials"></a>
+        <a href="#instagram"><img src="SocialIcon2.svg" alt="instagram" style="left: 77em" class="header_Socials"></a>
+        <a href="#rgu"><img src="SocialIcon3.svg" alt="RGU" style="left: 87em" class="header_Socials"></a>
         
     </header>
     <!-- Nav - 7 tabs, each different SVGs of same format. All link to corresponding pages -->
@@ -38,12 +40,12 @@
                 <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
             </li>
             <li style="left: 33.4%">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                <a href="review-html.html"><img src="review_Tab.svg" alt="REVIEW_PAGE" class="nav_Tab"></a>
             </li>
 
             <!-- home tab will be inverted colors + bigger + slightly lower down -->
             <li>
-                <a href="basic layout in html.html"><img src="Home_Tab.svg" alt="TABNAME_HERE" class="nav_HomeTab"></a>
+                <a href="index.html"><img src="Home_Tab.svg" alt="HOME_PAGE" class="nav_HomeTab"></a>
             </li>
 
             <li style="right: 33.4%">
@@ -64,78 +66,49 @@
 
     <!-- Section - contains "user submitted" reviews -->
     <section class="review_Section"> 
+        <br> <br> <br> <br> <br> <br>
+        <h4 class="review_Section_Title">Biscuit Reviews</h4>
+        <br> <br> <br> <br> 
         <div class="review_Div">
             <!-- headline contains image, author, title and subtitle-->
-            <div class="review_Headline" id="review_Headline_left">
-                <h1> A Nice Nibble </h1>
-                <h2><span style="opacity: 0.5">written by </span>Jason Zimmerman</h2>
-                <img src="cookie.png" alt="">
-                <h2>A review of <span>Clobba Supreme</span></h2>
+            <div class="review_Headline">
+                <h1>Review Title</h1>
+                <h2><span>"subheading of the review to give it some flavor text"</span></h2>
+                <img src="Content\Bourbon Biscuit.jpg" alt="Biscuit Picture">
+                <h2><span>by AUTHOR</span></h2>
             </div>
-
             <!-- body contains text, score bars-->
-            <div class="review_Body" id="review_Body_right">
+            <div class="review_Body">
                 <p>
-                    Heh! That theyuh clobbah patteh tastes like ah garbage! Ah wouldnt even suhve that to escargoon.
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT 
+                    <br><br>
+                    These boxes support up to about 500 characters
+                    <br><br>
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT 
+ 
                 </p>
             </div>  
         </div>
 
         <div class="review_Div">
             <!-- headline contains image, author, title and subtitle-->
-            <div class="review_Headline" id="review_Headline_right">
-                <h1> A Nice Nibble </h1>
-                <h2><span style="opacity: 0.5">written by </span>Jason Zimmerman</h2>
-                <img src="cookie.png" alt="">
-                <h2>A review of <span>Clobba Supreme</span></h2>
+            <div class="review_Headline" title="altHead">
+                <h1>Review Title</h1>
+                <h2>Author_of_Review</h2>
+                <img src="Content\Bourbon Biscuit.jpg" alt="Biscuit Picture">
+                <h2><span>Subheading</span></h2>
             </div>
             <!-- body contains text, score bars-->
-            <div class="review_Body" id="review_Body_left">
+            <div class="review_Body" title="altBody">
                 <p>
-                    This biscuit is pretty optimal eating. It goes down fast at low percents due to its small size
-                    and weight. It has a lot of good qualities too, mind you. Its small size makes its hitbox tiny and 
-                    with the game's 
-                </p>
-            </div>             
-        </div>
-
-        <div class="review_Div">
-            <div class="review_Headline" id="review_Headline_left">
-                <h1> A Nice Nibble </h1>
-                <h2><span style="opacity: 0.5">written by </span>Jason Zimmerman</h2>
-                <img src="cookie.png" alt="">
-                <h2>A review of <span>Highlander's Bounty</span></h2>
-            </div>
-
-            <div class="review_Body" id="review_Body_right">
-                <p>
-                    aye laddies and lassies let me tel yoo teh tail of how ah gut eed the feer sest
-                    beeest of all yet tee park wi me trusty eyelander sowrd i dashed in there and
-                    shanked it RITE UP THERE as it stumbelled and scrambeled to its affy wee leggies
-                    boms both sticky and solid rained doon fae above and KABLOOEY THE WICKED BEEST WAS 
-                    WICKED NAE MORE
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT 
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT 
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT 
+                    TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
                 </p>
             </div>  
         </div>
 
-        <div class="review_Div">
-            <!-- headline contains image, author, title and subtitle-->
-            <div class="review_Headline" id="review_Headline_right">
-                <h1> A Nice Nibble </h1>
-                <h2><span style="opacity: 0.5">written by </span>Jason Zimmerman</h2>
-                <img src="cookie.png" alt="">
-                <h2>A review of <span>Clobba Supreme</span></h2>
-            </div>
-
-            <!-- body contains text, score bars-->
-            <div class="review_Body" id="review_Body_left">
-                <p>
-                    This biscuit is pretty optimal eating. It goes down fast at low percents due to its small size
-                    and weight. It has a lot of good qualities too, mind you. Its small size makes its hitbox tiny and 
-                    with the game's 
-                </p>
-            </div>             
-        </div>
     </section>
 
     
@@ -158,7 +131,7 @@
             
             <input type="text" id="reviewAuthor" class="textInput" placeholder="Your name..." autocomplete="off" required>
            
-            <textarea id="reviewReview" placeholder="Write your review..." autocomplete="off" required></textarea>
+            <textarea id="reviewReview" placeholder="Write your review (please keep it less than 500 characters)..." autocomplete="off" maxlength="500" required></textarea>
            
             <label for="reviewScore">Give your score </label>
             <div id="review_slider">
@@ -176,6 +149,13 @@
             <br>
         </form>
     </section>
+
+    <!-- a simple return to top button -->
+    <div id="returnToTop" onclick="returnToTop()">
+        <p>
+            Go to Top
+        </p>
+    </div>
 
     <!-- Footer - this is consistent across the entire site barring the <span> which will change depending on author -->
     <footer>
@@ -218,6 +198,12 @@
             let commonNameBeginning = filePath.lastIndexOf("\\");
             filePath = filePath.slice(commonNameBeginning + 1, filePath.length);
             document.getElementById("uploadedFile").innerText = "\"" + filePath +  "\"" + " is selected"; 
+        }
+
+        // a basic return to top function
+        function returnToTop() {
+            let top = 0;
+            document.documentElement.scrollTop = top;
         }
 
     </script>

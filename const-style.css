@@ -44,11 +44,20 @@ header {
     z-index: 2;
     height: 7em;
     width: 7em;
-    transition: 200ms;
+    transition: 500ms;
+
 }
 
-.header_Socials:active {
-    filter: saturate(5);
+[alt ~= instagram] {
+    filter: hue-rotate(120deg);
+}
+
+[alt ~= RGU] {
+    filter: hue-rotate(60deg);
+}
+
+.header_Socials:hover {
+    transform: translateY(-50%) scale(1.4);
 }
 
 header a {
@@ -101,6 +110,7 @@ nav li {
     top: 5em;
 }
 
+
 /* 
     FOOTER 
         contains styling for the footer which is consistent across all pages
@@ -111,17 +121,18 @@ footer {
     background: #eec062;
     border-radius: 50px;
     margin: 4vh auto;
-    height: 3em;
-    width: 110em;
+    height: 3.5em;
+    width: 95em;
 }
 
 footer p {
     color: rgb(32, 14, 11);
     margin: auto;
-    font-family: Montserrat;
+    font-family: grandstander;
     font-size: 2em;
 }
 
 footer span {
-    color: #cd5752;
+    color: #cd5753;
+    font-weight: 1000;
 }
