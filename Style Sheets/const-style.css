@@ -1,0 +1,199 @@
+/*
+    This file contains all the style that is consistent across multiple pages
+    this includes: header, nav, footer and other misc elements like the "to top" button
+    - Adam
+*/
+
+/* gets a clean slate of most elements*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: none;
+}
+
+/* 
+    change the scale of all pages here. All properties using the "em" units will be affected.
+*/
+html {
+    font-size: 0.8em;
+}
+
+/* backgrounds of all pages will be the same color */
+body {
+    background-color: #41251d;
+}
+
+/* combining repeated CSS */
+header,
+nav {
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+
+/* 
+    HEADER style - pretty much a container for an svg graphic that has three icons layered above.
+*/
+header {
+    z-index: 1;
+    margin: 2em auto;
+    height: 20em;
+    width: 100em;
+    box-shadow: 0 2em 2em #2c0907;
+    overflow: hidden;
+    border-radius: 5em;
+}
+
+.header_Main {
+    position: relative;
+    z-index: 1;
+    height: 20em;
+    margin: 0;
+    width: 160em;
+}
+
+.header_Socials {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 10em;
+    z-index: 2;
+    height: 7em;
+    width: 7em;
+    transition: 300ms;
+}
+
+[alt ~= instagram] {
+    filter: hue-rotate(120deg);
+}
+
+[alt ~= RGU] {
+    filter: hue-rotate(60deg);
+}
+
+.header_Socials:hover {
+    transform: translateY(-50%) scale(1.4);
+}
+
+header a {
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+
+/* 
+    NAV - Multiple vector graphics in a horizontal list
+    position of specific tabs changed inline 
+*/
+
+nav {
+    top: -14em;
+    height: 12em;
+    width: 70em;
+    padding-bottom: 2em;
+}
+
+nav ul {
+    margin: 0 auto;
+}
+
+nav li {
+    position: absolute;
+}
+
+.nav_Tab,
+.nav_HomeTab {
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 20em;
+    transition: 500ms;
+    border-radius: 2em;
+}
+
+.nav_HomeTab {
+    top: 2em;
+}
+
+.nav_Tab:hover {
+    top: 3em;
+}
+
+.nav_HomeTab:hover {
+    top: 5em;
+}
+
+
+
+
+/* 
+    FOOTER 
+        contains styling for the footer which is consistent across all pages
+        be sure to change the position of the <span> in the HTML to cover your name on pages you created
+*/
+
+footer {
+    display: grid;
+    background: #eec062;
+    font-family: grandstander;
+    border-radius: 5em;
+    text-align: center;
+    margin: 4em auto;
+    height: 4em;
+    width: 95em;
+}
+
+footer p {
+    color: #41251d;
+    margin: auto;
+    font-family: grandstander;
+    font-size: 2em;
+}
+
+footer span {
+    color: #cd5753;
+    font-weight: bold;
+}
+
+
+
+
+/* 
+    EXTRA 
+        below is are some miscellaneous styles. These arent essential elements, but if you want them
+        on your page, I'd recommend using these styles.
+*/
+
+/* a "return to top" button (uses the goTo script)*/
+
+#returnToTop {
+    position: fixed;
+    font-family: montserrat;
+    font-weight: 800;
+    padding: 0.5em;
+    background: #eec062;
+    text-align: center;
+    cursor: pointer;
+    border: solid #2c0907 0.2em;
+    width: 4em;
+    height: 4em;
+    bottom: 1em;
+    right: 3em;
+    z-index: 777; /*top*/
+    font-size: 2em;
+    color: #2c0907;
+    cursor: pointer;
+    border-radius: 5em;
+}
+
+#returnToTop:hover{
+    background: #ec8e4f;
+    box-shadow: 0 0 1em #2c0907
+}

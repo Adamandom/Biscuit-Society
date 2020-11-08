@@ -1,0 +1,113 @@
+        /* Middle Section with links */
+
+        .section_Div {
+            position: relative;
+            z-index: -1;
+
+            display: grid;
+            height: 90em;
+            width: 110em;
+            background: #eec062;
+            border-radius: 5em;
+            margin: 0 auto;
+        }
+
+        .section_Div ul {
+            position: relative;
+            top: 5em;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            margin: 0 auto;
+        }
+
+        .section_Div li {
+            display: inline-block;
+            position: relative;
+            background:#cd5752;
+            width: 50em;
+            height: 20em;
+            border-radius: 2em;
+        }
+        
+        .section_Title {
+            display: block;
+            margin: 0.25em 0 0 0.75em;
+            font-family: 'Ranga', serif;
+            font-size: 4em;
+            font-weight: 500;
+            color: #ffc040;
+            max-width: 50%;
+        }
+
+        .section_Text {
+            float: left;
+            display: grid;
+            margin: 0 0 0 2em;
+            text-align: left;
+            word-wrap: break-word;            
+            width: 40%;
+            font-family: 'Montserrat', sans-serif;
+            
+            font-size: 2em;
+            color: #f7d299;
+        }
+
+        .section_Icon {
+            position: absolute;
+            width: 12em;
+            height: 12em;
+            transition: 1s;
+        }
+
+        .section_Icon:hover {
+            transform: scale(1.5);
+        }
+
+        .section_Div a {
+            display: grid;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 
+        COLLAPSE SECTION 
+            contains styling for the collapse section. This section uses an svg file called "DDICON.svg"
+            you can add additional elements within the section
+            note: you'll need the javascript for functionality
+        */
+
+        #collapse_icon {
+            position: relative;
+            margin: -4em auto 0;
+            z-index: 2;
+            display: grid;
+            
+            cursor: pointer;
+            height: 9em;
+            width: 9em;
+            transform: rotate(0deg);
+            transition: 0.5s;
+        }
+           
+        #collapse_section {
+            display: grid;
+            background-color: #eec062;
+            margin: 4em auto;
+
+            height: 0em;
+            opacity: 0;
+
+            width: 100em;
+            position: relative;
+            top: -5em;
+            z-index: -1;
+            border-radius: 50px;
+
+            transition: 1s;
+        }
+    
+
+        
+
+        

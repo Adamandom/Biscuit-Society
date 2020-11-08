@@ -1,0 +1,105 @@
+/*
+below is the styles for forms
+This is used in the review and contact pages
+things are subject to change, feel free to override anything with your own style sheets
+ - Adam
+*/
+
+form {
+    display: grid;
+    margin: 0 auto;
+}
+
+form label {
+    display: grid;
+    font-family: montserrat;
+    font-size: 2em;
+    font-weight: 800;
+    color: #41251d;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    display: grid;
+    margin: 0 auto;
+    background: #cd5753;
+    font-family: montserrat;
+    color: #fff9f9;
+    border: none;
+    outline: none;
+    text-indent: 1em;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+
+form input {
+    height: 2em;
+    width: 15em;
+    font-weight: 600;
+    margin: 0 auto;
+    border-radius: 5em;
+
+}
+
+::placeholder {
+    color: #fff9f9;
+    opacity: 0.5;
+}
+
+form textarea {
+    height: 5em;
+    width: 30em;
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 2em;
+    resize: none;
+}
+
+form input[type=range] {
+    appearance: none;
+    width: 30em;
+    height: 4em;
+    overflow: hidden;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 300ms;
+    font-size: 1em;
+}
+
+form input[type=range]::-webkit-slider-thumb {
+    border-radius: 5em;
+    appearance: none;
+    width: 3em;
+    height: 3em;
+    background: #fff9f9;
+}
+
+form input[type=submit],
+form input[type=button] {
+    height: 5em;
+    width: 10em;
+    border: solid #41251d 0.25em;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form input[type=submit]:hover {
+    background: #4ee630;
+    border: solid fff9f9 0.25em;
+    box-shadow: 0 0 0.5em #4ee630;
+
+}
+
+form input[type=button] {
+    font-size: 1.5em;
+    border-radius: 2em;
+}
+
+form input[type=button]:hover {
+    background: #ec8e4f;
+    border: solid #fff9f9 0.25em;
+    box-shadow: 0 0 0.5em #ec8e4f;
+
+}

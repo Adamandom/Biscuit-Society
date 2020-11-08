@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Tab Title and Favicon -->
+        <title>Biscuit Society - Review</title> 
+        <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg"/>
+
     <!-- Type faces imported from Google Fonts (note: all fonts are OPEN SOURCE)-->
-        <!-- A structured typeface for main bodies of text-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" >
         <!-- A playful typeface for Titles-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+        <!-- A structured typeface for main bodies of text-->
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+        
     
     <!-- CSS Style Sheet for Home Page -->
-    <link rel="stylesheet" href="review-style.css">
-    <!-- CSS Style for consistent elements -->
-    <link rel="stylesheet" href="const-style.css">
+        <link rel="stylesheet" href="Style Sheets/review-style.css">
+    <!-- CSS Style for consistent elements like the Header and Nav -->
+        <link rel="stylesheet" href="Style Sheets/const-style.css">
+    <!-- CSS Style for consistent elements like the Header and Nav -->
+        <link rel="stylesheet" href="Style Sheets/form-style.css">    
 
     <!-- Meta Data -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tab Title and Favicon -->
-    <title>Biscuit Society - Home</title> 
-    <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+        <!-- Header - consists of an SVG with other SVG icons for social media layered on top-->
+        <header>
+            <img src="Content/Vector Graphics/Header.svg" alt="Header" class="header_Main">
+            <a href="#facebook"><img src="Content/Vector Graphics/SocialIcon1.svg" alt="facebook" style="left: 67em" class="header_Socials"></a>
+            <a href="#instagram"><img src="Content/Vector Graphics/SocialIcon2.svg" alt="instagram" style="left: 77em" class="header_Socials"></a>
+            <a href="#rgu"><img src="Content/Vector Graphics/SocialIcon3.svg" alt="RGU" style="left: 87em" class="header_Socials"></a>
+            
+        </header>
+        <!-- Nav - 7 tabs, each different SVGs of same format. All link to corresponding pages -->
+        <nav>
+            <ul>
+                <li style="left: 0">
+                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                </li>
+                <li style="left: 16.7%">
+                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                </li>
+                <li style="left: 33.4%">
+                    <a href="review-html.html"><img src="Content/Vector Graphics/review_Tab.svg" alt="REVIEW_PAGE" class="nav_Tab"></a>
+                </li>
+
+                <!-- home tab will be inverted colors + bigger + slightly lower down -->
+                <li>
+                    <a href="index.html"><img src="Content/Vector Graphics/Home_Tab.svg" alt="HOME_PAGE" class="nav_HomeTab"></a>
+                </li>
+
+                <li style="right: 33.4%">
+                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                </li>
+                <li style="right: 16.7%">
+                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                </li>
+                <li style="right: 0">
+                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                </li>
+            </ul>
+        </nav>
     
-    <!-- Header - consists of an SVG with other SVG icons for social media layered on top-->
-    <header>
-        <img src="Header.svg" alt="Header" class="header_Main">
-        <a href="#facebook"><img src="SocialIcon1.svg" alt="facebook" style="left: 67em" class="header_Socials"></a>
-        <a href="#instagram"><img src="SocialIcon2.svg" alt="instagram" style="left: 77em" class="header_Socials"></a>
-        <a href="#rgu"><img src="SocialIcon3.svg" alt="RGU" style="left: 87em" class="header_Socials"></a>
-        
-    </header>
-    <!-- Nav - 7 tabs, each different SVGs of same format. All link to corresponding pages -->
-    <nav>
-        <ul>
-            <li style="left: 0">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
-            </li>
-            <li style="left: 16.7%">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
-            </li>
-            <li style="left: 33.4%">
-                <a href="review-html.html"><img src="review_Tab.svg" alt="REVIEW_PAGE" class="nav_Tab"></a>
-            </li>
-
-            <!-- home tab will be inverted colors + bigger + slightly lower down -->
-            <li>
-                <a href="index.html"><img src="Home_Tab.svg" alt="HOME_PAGE" class="nav_HomeTab"></a>
-            </li>
-
-            <li style="right: 33.4%">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
-            </li>
-            <li style="right: 16.7%">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
-            </li>
-            <li style="right: 0">
-                <a href="#recipes"><img src="nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
-            </li>
-        </ul>
-    </nav>
-
-    <section class="intro_Div">
-        <h1> intro section </h1>
+    <!-- Section - contains intro graphic, explanation of page and link to form -->
+    <section class="intro_Section">
+        <img src="Content/Vector Graphics/review_introductionGraphic.svg" alt="intro_graphic">
+        <h1>Start reading reviews of biscuits from our society or <span onclick="goTo(2150)">write your own</span> !</h1>
     </section>
+
 
     <!-- Section - contains "user submitted" reviews -->
     <section class="review_Section"> 
-        <br> <br> <br> <br> <br> <br>
-        <h4 class="review_Section_Title">Biscuit Reviews</h4>
-        <br> <br> <br> <br> 
+        
+        <h1>Biscuit Reviews</h1>
+
         <div class="review_Div">
             <!-- headline contains image, author, title and subtitle-->
-            <div class="review_Headline">
+            <div class="review_head">
                 <h1>Review Title</h1>
                 <h2><span>"subheading of the review to give it some flavor text"</span></h2>
-                <img src="Content\Bourbon Biscuit.jpg" alt="Biscuit Picture">
-                <h2><span>by AUTHOR</span></h2>
+                <img src="Content/Raster Images/Bourbon Biscuit.jpg" alt="Biscuit Picture">
+                <h2><span>by</span> AUTHOR</h2>
+                <div class="score_container">
+                    <div id="score_bar"></div>
+                </div>
             </div>
             <!-- body contains text, score bars-->
             <div class="review_Body">
@@ -92,10 +101,10 @@
 
         <div class="review_Div">
             <!-- headline contains image, author, title and subtitle-->
-            <div class="review_Headline" title="altHead">
+            <div class="review_head" title="altHead">
                 <h1>Review Title</h1>
                 <h2>Author_of_Review</h2>
-                <img src="Content\Bourbon Biscuit.jpg" alt="Biscuit Picture">
+                <img src="Content/Raster Images/coffee-and-biscuits.jpg" alt="Biscuit Picture">
                 <h2><span>Subheading</span></h2>
             </div>
             <!-- body contains text, score bars-->
@@ -114,30 +123,23 @@
     
     <!-- Form Section - this section contains a form for users to submit their own reviews-->
 
-    <datalist id="scoreValues">
-        <option value="1"></option>
-        <option value="2"></option>
-        <option value="3"></option>
-        <option value="4"></option>
-        <option value="5"></option>
-    </datalist>
-
     <section class="form_Section">
         <h1>Leave your own review!</h1>
 
-        <form action="">
+        <form action="" enctype="text/plain">
             <input type="text" id="reviewTitle" class="textInput" placeholder="Title..." autocomplete="off" required>
+            <br><br>
             <input type="text" id="reviewSubHeading" class="textInput" placeholder="Subheading..." autocomplete="off" required>
-            
+            <br><br>
             <input type="text" id="reviewAuthor" class="textInput" placeholder="Your name..." autocomplete="off" required>
-           
+            <br><br>
             <textarea id="reviewReview" placeholder="Write your review (please keep it less than 500 characters)..." autocomplete="off" maxlength="500" required></textarea>
-           
+            <br><br><br><br>
             <label for="reviewScore">Give your score </label>
             <div id="review_slider">
-                <input type="range" id="reviewScore" min = 1 max = 5 step=1 value=3 list="scoreValues" onchange="sliderColor()" required>
+                <input type="range" id="reviewScore" min = 1 max = 120 step=1 value=4 onchange="sliderColor()" required>
             </div>
-            <h3 id="currentScore" style="color: #2c0907;">3/5</h3>
+            <h3 id="currentScore" style="color: #2c0907;">1/5</h3>
             <div id="reviewImage_container">
                 <h3> Upload image of the biscuit you reviewed</h3>
                 <input type="file" id="reviewImage" accept=".png, .jpg, .jpeg" required> 
@@ -145,17 +147,15 @@
             <h3 id="uploadedFile" style="color: #2c0907">No file has been selected</h3>
             
             <input type="submit" id="reviewSubmit" value="POST!">
-            <br>
-            <br>
+            
+            <br><br>
         </form>
     </section>
 
     <!-- a simple return to top button -->
-    <div id="returnToTop" onclick="returnToTop()">
-        <p>
-            Go to Top
-        </p>
-    </div>
+    <button id="returnToTop" onclick="goTo(0)">
+        To Top
+    </button>
 
     <!-- Footer - this is consistent across the entire site barring the <span> which will change depending on author -->
     <footer>
@@ -164,11 +164,10 @@
         </p>
     </footer>
 
-
-
     <!-- Javascript to be exported to its own file when finalised-->
     <script>
-        var sliderColors = [0, 30, 60, 90, 120]
+        
+        // var sliderColors = [0, 30, 60, 90, 120]
         document.getElementById("reviewImage").addEventListener("change", showUpload);
 
         var topOfPage = 0;
@@ -177,17 +176,15 @@
             document.documentElement.scrollTop = 0;
         }
 
-        function check() {
-            alert("check");
-        }
+        
 
         // changes color depending on slider value
         function sliderColor() {
             let slider = document.getElementById("reviewScore");
-            let value = document.getElementById("reviewScore").value;
-            let color = sliderColors[value-1]
+            let color = document.getElementById("reviewScore").value;
+            let score = Math.ceil(color/24);
             slider.style.filter = "hue-rotate(" + String(color) + "deg)";
-            document.getElementById("currentScore").innerText = value + "/5";
+            document.getElementById("currentScore").innerText = score + "/5";
             
         }
 
@@ -201,9 +198,43 @@
         }
 
         // a basic return to top function
-        function returnToTop() {
-            let top = 0;
-            document.documentElement.scrollTop = top;
+        function goTo(pos) {
+            document.documentElement.scrollTop = pos;
+        }
+
+        // shows the "to top" button only after down a certain amount of the page
+
+        window.onscroll = () => showToTop();
+        function showToTop() {
+            buttonState = document.getElementById("returnToTop").style.display;
+            scrollPosition = document.documentElement.scrollTop;
+            if (buttonState === "none" && scrollPosition > 500) {
+                buttonState = "none";
+            }
+            else {
+                buttonState = "grid";
+            }
+        }
+        
+        // DEBUG: get scroll position
+        //document.addEventListener("keydown", scrollPos);
+        function scrollPos() {
+            alert(document.documentElement.scrollTop);
+        }
+
+        // DEBUG: sees if event listener works
+        function check() {
+            alert("check");
+        }
+
+
+        // adds user enterred content to a review template and loads it on the page
+        function addReview() {
+
+        }
+
+        function storeContent() {
+
         }
 
     </script>
