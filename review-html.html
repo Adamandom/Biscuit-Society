@@ -83,7 +83,7 @@
                 <img src="Content/Raster Images/Bourbon Biscuit.jpg" alt="Biscuit Picture">
                 <h2><span>by</span> AUTHOR</h2>
                 <div class="score_container">
-                    <div id="score_bar"></div>
+                    <div class="score_bar" title="2"></div>
                 </div>
             </div>
             <!-- body contains text, score bars-->
@@ -106,6 +106,9 @@
                 <h2>Author_of_Review</h2>
                 <img src="Content/Raster Images/coffee-and-biscuits.jpg" alt="Biscuit Picture">
                 <h2><span>Subheading</span></h2>
+                <div class="score_container">
+                    <div class="score_bar" title="4"></div>
+                </div>
             </div>
             <!-- body contains text, score bars-->
             <div class="review_Body" title="altBody">
@@ -167,19 +170,30 @@
     <!-- Javascript to be exported to its own file when finalised-->
     <script>
         
-        // var sliderColors = [0, 30, 60, 90, 120]
         document.getElementById("reviewImage").addEventListener("change", showUpload);
 
-        var topOfPage = 0;
-        // function that will return to the top of the page on click
-        function toTop() {
-            document.documentElement.scrollTop = 0;
-        }
+        // // change the score bar on hover
+        // var scoreColors = ["red", "orange", "yellow", "green", "lime"];
+        // function scoreBar() {
+        //     document.getElementById("score_text").style.display = "none";
+
+        //     let bar = document.getElementById("score_bar");
+        //     let score = bar.title; 
+        //     let color = scoreColors[score-1]; 
+        //     let width = String(18*score) + "%";
+
+        //     bar = bar.style;
+
+        //     bar.width = width;
+        //     bar.background = color;
+
+        // }
 
         
 
         // changes color depending on slider value
         function sliderColor() {
+
             let slider = document.getElementById("reviewScore");
             let color = document.getElementById("reviewScore").value;
             let score = Math.ceil(color/24);

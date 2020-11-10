@@ -2,8 +2,6 @@
 
         .section_Div {
             position: relative;
-            z-index: -1;
-
             display: grid;
             height: 90em;
             width: 110em;
@@ -32,22 +30,20 @@
         
         .section_Title {
             display: block;
-            margin: 0.25em 0 0 0.75em;
-            font-family: 'Ranga', serif;
+            margin: 0.5em 0 0 0.5em;
+            font-family: Grandstander;
             font-size: 4em;
             font-weight: 500;
             color: #ffc040;
-            max-width: 50%;
         }
 
         .section_Text {
             float: left;
-            display: grid;
-            margin: 0 0 0 2em;
+            margin: 0.5em 0 0 1.5em;
             text-align: left;
             word-wrap: break-word;            
             width: 40%;
-            font-family: 'Montserrat', sans-serif;
+            font-family: montserrat;
             
             font-size: 2em;
             color: #f7d299;
@@ -55,9 +51,12 @@
 
         .section_Icon {
             position: absolute;
+            float: right;
+            display: inline;
+            z-index: 555;
             width: 12em;
             height: 12em;
-            transition: 1s;
+            transition: 500ms;
         }
 
         .section_Icon:hover {
