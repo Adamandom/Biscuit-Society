@@ -83,12 +83,14 @@ form input[type=button] {
     border: solid #41251d 0.25em;
     cursor: pointer;
     transition: 300ms;
+    text-align: center;
 }
 
 form input[type=submit]:hover {
     background: #4ee630;
     border: solid fff9f9 0.25em;
     box-shadow: 0 0 0.5em #4ee630;
+    
 
 }
 

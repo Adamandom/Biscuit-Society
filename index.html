@@ -70,48 +70,48 @@
             <li style="right: 1.5em">
                 <h1 class="section_Title">Gallery</h1>
                 <p class="section_Text">
-                    link to review page
+                    Check out some of our society's achievements!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Gallery" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Gallery" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
                 <h1 class="section_Title">Biscuit History</h1>
                 <p class="section_Text">
-                    Check out our society's recent achievements!
+                    Read up on the extensive lore of our favorite tasty treats!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Biscuit History" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Biscuit History" class="section_Icon" onclick="biscuitBite(this)">
             </li>
         </ul> 
         <ul>
             <li style="right: 1.5em">
                 <h1 class="section_Title">Reviews</h1>
                 <p class="section_Text">
-                    Kill some time in our Cookie Clicker inspired game, Biscuit Bash!
+                    See our members thoughts on biscuits by reading their reviews!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Reviews" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Reviews" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
                 <h1 class="section_Title">Biscuit Bash</h1>
                 <p class="section_Text">
-                    Check out our society's recent achievements!
+                    Kill some time in our Cookie Clicker inspired game, Biscuit Bash!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Biscuit Bash" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Biscuit Bash" class="section_Icon" onclick="biscuitBite(this)">
             </li>
         </ul>
         <ul>
             <li style="right: 1.5em">
                 <h1 class="section_Title">Contact Us</h1>
                 <p class="section_Text">
-                    Kill some time in our Cookie Clicker inspired game, Biscuit Bash!
+                    Send us your thoughts and get into contact with us here!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Contact Us" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Contact Us" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
                 <h1 class="section_Title">Recipes</h1>
                 <p class="section_Text">
-                    Check out our society's recent achievements!
+                    Bake your own biscuits with these home recipes from our society!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Recipes" class="section_Icon" onmouseover="biscuitBite(this)" onmouseout="biscuitReturn(this)">
+                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Recipes" class="section_Icon" onclick="biscuitBite(this)">
             </li>
         </ul> 
     </section>
@@ -121,7 +121,7 @@
     <img src="Content/Vector Graphics/CollapseIcon.svg" alt="click to collpase/ expand" id="collapse_icon" onclick="collapse()">
 
     <section id="collapse_section">
-        <h1>Drop Down</h1>
+        <img src="Content/placeholder.svg" alt="" id = "collapse_graphic">
     </section>
 
     <!-- Footer - this is consistent across the entire site barring the <span> which will change depending on author -->
@@ -132,21 +132,29 @@
     </footer>
 
 
-
+    <audio src="Content/Sounds/bite_MC.mp3" id="bite_sfx"></audio>
     <!-- Javascript to be exported to its own file when finalised-->
     <script>
         function collapse() {
             let dropDownSec = document.getElementById("collapse_section");
             // checks if collapsed, opens if not.
-            if (dropDownSec.style.height === "25em") {
+            if (dropDownSec.style.height === "30em") {
+                document.getElementById("collapse_graphic").style.display = "none";
+
                 document.getElementById("collapse_icon").style.transform = "rotate(0deg)";
                 document.getElementById("collapse_section").style.height = "0em";
                 document.getElementById("collapse_section").style.opacity = "0";
             }
             else {
                 document.getElementById("collapse_icon").style.transform = "rotate(180deg)";
-                document.getElementById("collapse_section").style.height = "25em";
+                document.getElementById("collapse_section").style.height = "30em";
                 document.getElementById("collapse_section").style.opacity = "1";
+
+                document.getElementById("collapse_graphic").style.display = "grid";
+                window.setInterval(function() {
+                    document.getElementById("collapse_graphic").style.opacity = "1";
+                }, 300);
+                
             }
         }
 
@@ -155,6 +163,8 @@
         function toTop() {
             document.documentElement.scrollTop = 0;
         }
+
+        // debug
 
         function check() {
             alert("This is a check")
@@ -168,14 +178,53 @@
             "Content/Vector Graphics/Home_Biscuit.svg",
         ];
 
+        // sources for the bite noises
+        var noises = [
+            "bite_MC.mp3",
+        ]
 
-        function biscuitBite(biscuit) {
-            biscuit.src = bittenBiscuits[0];
-                   
+        // sources for all pages on site
+
+        const pageLinks = [
+            "index-html.html", // default
+            "#Gallery",
+            "#History",
+            "review-html.html", // id = 3
+            "#Game",
+            "#Recipes",
+        ]
+
+        function getId(biscuit) {
+            let page = biscuit.alt;
+            let id = "";
+
+            switch (page) {
+                case "Reviews":
+                    id = 3;
+                    break;
+                default:
+                    id = 0;
+            }
+
+            return id;
         }
 
-        function biscuitReturn(biscuit) {
-            biscuit.src = wholeBiscuits[0];
+        function biscuitBite(biscuit) {
+
+            let randint = () => Math.floor(Math.random()*noises.length); // always 0 for now
+            let sound = document.getElementById("bite_sfx");
+            let id = getId(biscuit);
+            // alert(pageLinks[id]);
+            sound.play();
+            biscuit.src = bittenBiscuits[0]; // which biscuit will be shown
+            biscuit.style.transform = "scale(1)";
+            // delays link to page
+            window.setInterval(function(){
+                if (id !== 0) {
+                    window.location.href = pageLinks[id];
+                }
+            }, 500, pageLinks);
+
         }
 
     </script>
