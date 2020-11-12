@@ -55,7 +55,7 @@
                     <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
                 </li>
                 <li style="right: 16.7%">
-                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                    <a href="quiz-html.html"><img src="Content/Vector Graphics/quiz_Tab.svg" alt="INITIATION_PAGE" class="nav_Tab"></a>
                 </li>
                 <li style="right: 0">
                     <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
@@ -75,11 +75,11 @@
                 <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Gallery" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
-                <h1 class="section_Title">Biscuit History</h1>
+                <h1 class="section_Title">Initiate Quiz</h1>
                 <p class="section_Text">
-                    Read up on the extensive lore of our favorite tasty treats!
+                    Test your mettle against a gauntlet of tricky questions!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Biscuit History" class="section_Icon" onclick="biscuitBite(this)">
+                <img src="Content/Vector Graphics/Quiz_Biscuit.svg" alt="Quiz" class="section_Icon" onclick="biscuitBite(this)">
             </li>
         </ul> 
         <ul>
@@ -88,7 +88,7 @@
                 <p class="section_Text">
                     See our members thoughts on biscuits by reading their reviews!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Reviews" class="section_Icon" onclick="biscuitBite(this)">
+                <img src="Content/Vector Graphics/Reviews_Biscuit.svg" alt="Reviews" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
                 <h1 class="section_Title">Biscuit Bash</h1>
@@ -121,7 +121,7 @@
     <img src="Content/Vector Graphics/CollapseIcon.svg" alt="click to collpase/ expand" id="collapse_icon" onclick="collapse()">
 
     <section id="collapse_section">
-        <img src="Content/placeholder.svg" alt="" id = "collapse_graphic">
+        <img src="Content/placeholder.svg" alt="collapse section graphic" id = "collapse_graphic">
     </section>
 
     <!-- Footer - this is consistent across the entire site barring the <span> which will change depending on author -->
@@ -172,10 +172,11 @@
 
         // changes biscuits to "bitten" alternates and (will) play sound
         var bittenBiscuits = [
-            "Content/Vector Graphics/Home_BiscuitALT.svg",
-        ];
-        var wholeBiscuits = [
-            "Content/Vector Graphics/Home_Biscuit.svg",
+            "Content/Vector Graphics/Home_BiscuitALT.svg", // default
+            "Content/Vector Graphics/Home_BiscuitALT.svg", // id = 1
+            "Content/Vector Graphics/Quiz_BiscuitALT.svg", // id = 2
+            "Content/Vector Graphics/Reviews_BiscuitALT.svg", // id = 3
+            
         ];
 
         // sources for the bite noises
@@ -188,7 +189,7 @@
         const pageLinks = [
             "index-html.html", // default
             "#Gallery",
-            "#History",
+            "quiz-html.html", // id = 2
             "review-html.html", // id = 3
             "#Game",
             "#Recipes",
@@ -199,6 +200,9 @@
             let id = "";
 
             switch (page) {
+                case "Quiz":
+                    id = 2;
+                    break;
                 case "Reviews":
                     id = 3;
                     break;
@@ -210,13 +214,12 @@
         }
 
         function biscuitBite(biscuit) {
-
             let randint = () => Math.floor(Math.random()*noises.length); // always 0 for now
             let sound = document.getElementById("bite_sfx");
             let id = getId(biscuit);
             // alert(pageLinks[id]);
             sound.play();
-            biscuit.src = bittenBiscuits[0]; // which biscuit will be shown
+            biscuit.src = bittenBiscuits[id]; // which biscuit will be shown
             biscuit.style.transform = "scale(1)";
             // delays link to page
             window.setInterval(function(){

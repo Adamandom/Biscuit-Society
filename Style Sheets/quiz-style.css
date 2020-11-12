@@ -1,0 +1,55 @@
+#container {
+  margin: 0 auto;
+  opacity: 0;
+  width: 90em;
+  background: #eec062;
+  padding: 2em;
+  border-radius: 5em;
+  box-shadow: #2c0907 0 0 2em; 
+  color: #41241c;
+  transition: 5s;
+}
+
+#container h1 {
+  display: grid;
+  padding-top: 0.25em;
+  font-size: 8em;
+  font-family: Grandstander;
+  font-weight: 800;
+  text-align: center;
+}
+
+#text {
+  font-family: montserrat;
+  font-weight: 600;
+  font-size: 2.5em;
+  margin: 1em auto;
+  text-align: center;
+  width: 80%;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.btn {
+  background-color: #cd5753;
+  border: 0.25em solid  #41241c;
+  border-radius: 5em;
+  padding: 0.5em;
+  color: white;
+  outline: none;
+  font-family: montserrat;
+  font-weight: 400;
+  font-size: 2em;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ec8e4f;
+  color: #41241c;
+}
