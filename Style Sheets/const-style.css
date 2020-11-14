@@ -191,6 +191,7 @@ footer span {
     color: #2c0907;
     cursor: pointer;
     border-radius: 5em;
+    transition: 200ms;
 }
 
 #returnToTop:hover{

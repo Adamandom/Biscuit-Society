@@ -16,8 +16,7 @@
         <link rel="stylesheet" href="Style Sheets/home-style.css">
     <!-- CSS Style for consistent elements like the Header and Nav -->
         <link rel="stylesheet" href="Style Sheets/const-style.css">
-    <!-- CSS Style for consistent elements like the Header and Nav -->
-        <link rel="stylesheet" href="Style Sheets/form-style.css">    
+ 
 
     <!-- Meta Data -->
         <meta charset="UTF-8">
@@ -58,7 +57,7 @@
                     <a href="quiz-html.html"><img src="Content/Vector Graphics/quiz_Tab.svg" alt="INITIATION_PAGE" class="nav_Tab"></a>
                 </li>
                 <li style="right: 0">
-                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                    <a href="recipes-html.html"><img src="Content/Vector Graphics/recipes_Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
                 </li>
             </ul>
         </nav>
@@ -111,7 +110,7 @@
                 <p class="section_Text">
                     Bake your own biscuits with these home recipes from our society!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Recipes" class="section_Icon" onclick="biscuitBite(this)">
+                <img src="Content/Vector Graphics/Recipes_Biscuit.svg" alt="Recipes" class="section_Icon" onclick="biscuitBite(this)">
             </li>
         </ul> 
     </section>
@@ -176,7 +175,9 @@
             "Content/Vector Graphics/Home_BiscuitALT.svg", // id = 1
             "Content/Vector Graphics/Quiz_BiscuitALT.svg", // id = 2
             "Content/Vector Graphics/Reviews_BiscuitALT.svg", // id = 3
-            
+            "", // none
+            "", // none
+            "Content/Vector Graphics/Recipes_BiscuitALT.svg" // id = 6
         ];
 
         // sources for the bite noises
@@ -192,7 +193,8 @@
             "quiz-html.html", // id = 2
             "review-html.html", // id = 3
             "#Game",
-            "#Recipes",
+            "#Contact",
+            "recipes-html.html", // id = 0
         ]
 
         function getId(biscuit) {
@@ -205,6 +207,9 @@
                     break;
                 case "Reviews":
                     id = 3;
+                    break;
+                case "Recipes":
+                    id = 6;
                     break;
                 default:
                     id = 0;
