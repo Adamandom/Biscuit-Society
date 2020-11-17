@@ -24,6 +24,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<div id="modal_container">
+    <div id="modal_content">
+        <h1>Thank you for your review!</h1>
+        <p>Click anywhere to close</p>
+    </div>
+</div>
+
 <body>
         <!-- Header - consists of an SVG with other SVG icons for social media layered on top-->
         <header>
@@ -129,26 +136,34 @@
     <section class="form_Section">
         <h1>Leave your own review!</h1>
 
-        <form action="" enctype="text/plain">
-            <input type="text" id="reviewTitle" class="textInput" placeholder="Title..." autocomplete="off" required>
+        <form enctype="text/plain" action="javascript:showModal()">
+            <input type="text" name="rTitle" id="reviewTitle" class="textInput" placeholder="Title..." autocomplete="off" required>
             <br><br>
-            <input type="text" id="reviewSubHeading" class="textInput" placeholder="Subheading..." autocomplete="off" required>
+
+            <input type="text" name="rSubHead" id="reviewSubHeading" class="textInput" placeholder="Subheading..." autocomplete="off" required>
             <br><br>
-            <input type="text" id="reviewAuthor" class="textInput" placeholder="Your name..." autocomplete="off" required>
+
+            <input type="text" name="rAuthor" id="reviewAuthor" class="textInput" placeholder="Your name..." autocomplete="off" required>
             <br><br>
-            <textarea id="reviewReview" placeholder="Write your review (please keep it less than 500 characters)..." autocomplete="off" maxlength="500" required></textarea>
+
+            <textarea name="rReview" id="reviewReview" placeholder="Write your review (please keep it less than 500 characters)..." autocomplete="off" maxlength="500" required></textarea>
             <br><br><br><br>
-            <label for="reviewScore">Give your score </label>
+
+            <label name="rScore" for="reviewScore">Give your score </label>
             <div id="review_slider">
-                <input type="range" id="reviewScore" min = 1 max = 120 step=1 value=4 onchange="sliderColor()" required>
+                <input type="range" id="reviewScore" min = 1 max = 120 step=1 value=4 onmouseup="sliderColor()" required>
             </div>
             <h3 id="currentScore" style="color: #41241c;">1/5</h3>
+            <br>
             <div id="reviewImage_container">
                 <h3> Upload image of the biscuit you reviewed</h3>
                 <input type="file" id="reviewImage" accept=".png, .jpg, .jpeg" required> 
             </div>
+            <br>
+
             <h3 id="uploadedFile" style="color: #41241c;">No file has been selected</h3>
-            
+            <br><br><br><br><br>
+
             <input type="submit" id="reviewSubmit" value="POST!">
             
             <br><br>
@@ -168,89 +183,7 @@
     </footer>
 
     <!-- Javascript to be exported to its own file when finalised-->
-    <script>
-        
-        document.getElementById("reviewImage").addEventListener("change", showUpload);
-
-        // // change the score bar on hover
-        // var scoreColors = ["red", "orange", "yellow", "green", "lime"];
-        // function scoreBar() {
-        //     document.getElementById("score_text").style.display = "none";
-
-        //     let bar = document.getElementById("score_bar");
-        //     let score = bar.title; 
-        //     let color = scoreColors[score-1]; 
-        //     let width = String(18*score) + "%";
-
-        //     bar = bar.style;
-
-        //     bar.width = width;
-        //     bar.background = color;
-
-        // }
-
-        
-
-        // changes color depending on slider value
-        function sliderColor() {
-
-            let slider = document.getElementById("reviewScore");
-            let color = document.getElementById("reviewScore").value;
-            let score = Math.ceil(color/24);
-            slider.style.filter = "hue-rotate(" + String(color) + "deg)";
-            document.getElementById("currentScore").innerText = score + "/5";
-            
-        }
-
-        // displays the name of the file below the button
-        function showUpload() {
-            let filePath = document.getElementById("reviewImage").value;
-            // this code section removes the fluff from the file directory
-            let commonNameBeginning = filePath.lastIndexOf("\\");
-            filePath = filePath.slice(commonNameBeginning + 1, filePath.length);
-            document.getElementById("uploadedFile").innerText = "\"" + filePath +  "\"" + " is selected"; 
-        }
-
-        // a basic return to top function
-        function goTo(pos) {
-            document.documentElement.scrollTop = pos;
-        }
-
-        // shows the "to top" button only after down a certain amount of the page
-
-        window.onscroll = () => showToTop();
-        function showToTop() {
-            buttonState = document.getElementById("returnToTop").style.display;
-            scrollPosition = document.documentElement.scrollTop;
-            if (buttonState === "none" && scrollPosition > 500) {
-                buttonState = "none";
-            }
-            else {
-                buttonState = "grid";
-            }
-        }
-        
-        // DEBUG: get scroll position
-        //document.addEventListener("keydown", scrollPos);
-        function scrollPos() {
-            alert(document.documentElement.scrollTop);
-        }
-
-        // DEBUG: sees if event listener works
-        function check() {
-            alert("check");
-        }
-
-
-        // adds user enterred content to a review template and loads it on the page
-        function addReview() {
-
-        }
-
-        function storeContent() {
-
-        }
-
-    </script>
+<script src="scripts/review-script.js"></script>
+<script src="scripts/Scroll to Top Script.js"></script>
 </body>
 </html>

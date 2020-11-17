@@ -27,16 +27,16 @@
         <!-- Header - consists of an SVG with other SVG icons for social media layered on top-->
         <header>
             <img src="Content/Vector Graphics/Header.svg" alt="Header" class="header_Main">
-            <a href="#facebook"><img src="Content/Vector Graphics/SocialIcon1.svg" alt="facebook" style="left: 67em" class="header_Socials"></a>
-            <a href="#instagram"><img src="Content/Vector Graphics/SocialIcon2.svg" alt="instagram" style="left: 77em" class="header_Socials"></a>
-            <a href="#rgu"><img src="Content/Vector Graphics/SocialIcon3.svg" alt="RGU" style="left: 87em" class="header_Socials"></a>
+            <a href="https://www.facebook.com/rguunion/"><img src="Content/Vector Graphics/SocialIcon1.svg" alt="facebook" style="left: 67em" class="header_Socials"></a>
+            <a href="https://www.instagram.com/robertgordonuni/"><img src="Content/Vector Graphics/SocialIcon2.svg" alt="instagram" style="left: 77em" class="header_Socials"></a>
+            <a href="https://www.rgu.ac.uk/"><img src="Content/Vector Graphics/SocialIcon3.svg" alt="RGU" style="left: 87em" class="header_Socials"></a>
             
         </header>
         <!-- Nav - 7 tabs, each different SVGs of same format. All link to corresponding pages -->
         <nav>
             <ul>
                 <li style="left: 0">
-                    <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
+                    <a href="contact-html.html"><img src="Content/Vector Graphics/contact_Tab.svg" alt="CONTACT_PAGE" class="nav_Tab"></a>
                 </li>
                 <li style="left: 16.7%">
                     <a href="#recipes"><img src="Content/Vector Graphics/nav Tab.svg" alt="TABNAME_HERE" class="nav_Tab"></a>
@@ -103,7 +103,7 @@
                 <p class="section_Text">
                     Send us your thoughts and get into contact with us here!
                 </p>
-                <img src="Content/Vector Graphics/Home_Biscuit.svg" alt="Contact Us" class="section_Icon" onclick="biscuitBite(this)">
+                <img src="Content/Vector Graphics/Contact_Biscuit.svg" alt="Contact" class="section_Icon" onclick="biscuitBite(this)">
             </li>
             <li style="left: 1.5em">
                 <h1 class="section_Title">Recipes</h1>
@@ -176,7 +176,7 @@
             "Content/Vector Graphics/Quiz_BiscuitALT.svg", // id = 2
             "Content/Vector Graphics/Reviews_BiscuitALT.svg", // id = 3
             "", // none
-            "", // none
+            "Content/Vector Graphics/Contact_BiscuitALT.svg", // id = 5
             "Content/Vector Graphics/Recipes_BiscuitALT.svg" // id = 6
         ];
 
@@ -193,13 +193,13 @@
             "quiz-html.html", // id = 2
             "review-html.html", // id = 3
             "#Game",
-            "#Contact",
-            "recipes-html.html", // id = 0
+            "contact-html.html", // id = 5
+            "recipes-html.html", // id = 6
         ]
 
         function getId(biscuit) {
             let page = biscuit.alt;
-            let id = "";
+            let id = 0;
 
             switch (page) {
                 case "Quiz":
@@ -207,6 +207,9 @@
                     break;
                 case "Reviews":
                     id = 3;
+                    break;
+                case "Contact":
+                    id = 5;
                     break;
                 case "Recipes":
                     id = 6;

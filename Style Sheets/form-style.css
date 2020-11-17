@@ -5,10 +5,44 @@ things are subject to change, feel free to override anything with your own style
  - Adam
 */
 
+
+.form_Section {
+    position: relative;
+    display: grid;
+    min-height: 80em;
+    width: 100em;
+    background: #eec062;
+    border-radius: 5em;
+    margin: 4em auto 0;
+
+    color: #2c0907;
+    font-family: Grandstander;
+    text-align: center;
+}
+
+
+.form_Section h1 {
+    color: #41241c;
+    font-size: 8em;
+    padding: 1em 0 0;
+}
+
+.form_Section p {
+    color: #41251d;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    width: 80%;
+    padding: 1em 0;
+    text-align: center;
+    font-family: Montserrat;
+}
+
 form {
     display: grid;
     margin: 0 auto;
 }
+
 
 form label {
     display: grid;
@@ -33,8 +67,15 @@ form textarea {
     font-weight: 600;
 }
 
+form h3 {
+    margin: 0 auto;
+    font-size: 2em;
+    color: #2c0907;
+    font-weight: 700;
+}
 
 form input {
+    border: solid 0.5rem #41251d;
     height: 2em;
     width: 15em;
     font-weight: 600;
@@ -43,15 +84,18 @@ form input {
 
 }
 
+
 ::placeholder {
     color: #fff9f9;
     opacity: 0.5;
 }
 
 form textarea {
+    border: solid 0.5rem #41251d;
     height: 5em;
     width: 30em;
     font-size: 2em;
+    text-indent: 0;
     padding: 1em;
     border-radius: 2em;
     resize: none;
@@ -79,8 +123,7 @@ form input[type=range]::-webkit-slider-thumb {
 form input[type=submit],
 form input[type=button] {
     height: 5em;
-    width: 10em;
-    border: solid #41251d 0.25em;
+    width: 20em;
     cursor: pointer;
     transition: 300ms;
     text-align: center;
@@ -88,20 +131,22 @@ form input[type=button] {
 
 form input[type=submit]:hover {
     background: #4ee630;
-    border: solid fff9f9 0.25em;
+    border: solid #fff9f9 0.5rem;
     box-shadow: 0 0 0.5em #4ee630;
-    
-
 }
 
 form input[type=button] {
-    font-size: 1.5em;
+    font-size: 2em;
     border-radius: 2em;
+}
+
+form input[type=file] {
+    margin: -1em 0 0;
 }
 
 form input[type=button]:hover {
     background: #ec8e4f;
-    border: solid #fff9f9 0.25em;
+    border: solid #fff9f9 0.5rem;
     box-shadow: 0 0 0.5em #ec8e4f;
 
 }
