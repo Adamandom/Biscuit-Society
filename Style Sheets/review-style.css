@@ -1,248 +1,150 @@
-        /* Review Section - contains reviews. Height is dependent on number of reviews */
+/* 
+Review Page Stylesheet
 
-        .review_Section,
-        .form_Section {
-            position: relative;
-            display: grid;
-            min-height: 80em;
-            width: 100em;
-            background: #eec062;
-            border-radius: 5em;
-            margin: 0 auto;
+This page contains styles specific to the review page
+ - Adam
+*/
 
-            color: #2c0907;
-            font-family: Grandstander;
-            text-align: center;
-        }
-
-        .review_Section>h1 {
-            color: #41241c;
-            font-size: 10em;
-            margin: 5rem 0 5rem;
-        }
-
-        /* REVIEW - contains review heads and bodies */
-
-        .review_Div {
-            position: relative;
-            display: grid;
-            height: 35rem;
-            width: 90%;
-            margin: 0 auto 1rem;
-        }
-
-        /* REVIEW HEAD - contains title, subtitle, author, score and image */
-
-        .review_head {
-            position: absolute;
-            border: #41241c solid 0.5em;
-            box-shadow: #2e09076e 1.2em 0 0.5em;
-            z-index: 1;
-            display: grid;
-            height: 30em;
-            width: 30em;
-            background: #f7d299;
-            border-radius: 2.5em;
-            transition: 500ms;
-        }
-
-        [title = altHead] {
-            right: 0;
-            box-shadow: #2e09076e -1.2em 0 0.5em;
-
-        }
-
-        .review_head:hover {
-            box-shadow: none;
-        }
-
-        .review_head h1 {
-            color: #41241c;
-            font-size: 3em;
-            font-family: grandstander;
-            font-weight: 1000;
-            padding-top: 0.5em;
-            max-height: 2em;
-            margin: 0 auto;
-        }
-
-        .review_head h2 {
-            color:  #41241c;
-            font-size: 1em;
-            font-family: montserrat; 
-            font-weight: 800;
-            width: 90%;   
-            margin: 0 auto;
-            max-height: 3em; 
-               
-        }
-
-        .review_head span {
-            font-style: italic; 
-        }
-
-        .review_head img {
-            max-width: 12em;
-            max-height: 10em;
-            overflow: hidden;
-            display: grid;
-            margin: 0 auto;
-            border: #41241c 0.5em solid;
-            border-radius: 1em;
-        }
-
-        .score_container {
-            position: relative;
-            display: grid;
-            font-family: grandstander;
-            background: #41241c;
-            height: 3em;
-            width: 90%;
-            margin: 0 auto;
-            border-radius: 5em;
-        }
-
-        .score_bar {
-            display: grid;
-            height: 50%;
-            margin: 0.75em;
-            z-index: 55;
-            border-radius: 5em;   
-        }
-
-        [title = "1"] {
-            background: red;
-            width: 18%;
-        }
-
-        [title = "2"] {
-            background: orange;
-            width: 36%;
-        }
-        [title = "3"] {
-            background: yellow;
-            width: 54%;
-        }
-        [title = "4"] {
-            background: yellowgreen;
-            width: 72%;
-        }
-        [title = "5"] {
-            background: lime;
-            width: 90%;
-        }
-        
-
-        .review_Body {
-            position: absolute;
-
-            z-index: 0;
-            display: grid;
-            height: 20em;
-            width: 50em;
-            margin: 5em 0;
-            background: #cd5753;
-            border-radius: 2.5em;
-            overflow: hidden;
-            
-            border: #41241c solid 0.5em;
-            transition: 500ms;
-        }
-
-        .review_Body[title = altBody] {
-            right: 0;
-        }
-
-        .review_Body p {
-            padding: 1.25em 2em;
-            margin: 0 0 0 5em;
-            color: #f1e5e5;
-            text-align: left;
-            font-family: montserrat;
-            max-width: 80%;
-            max-height: 80%;
-            font-size: 1.2em;
-        }
-
-        [title=altBody] p {
-            margin: 0 5em 0 0;
-            text-align: right;
-        }
-        
-        .review_Body:hover {
-            left: 25em;
-        }
-
-        [title = altBody]:hover {
-            left: 15em;
-        }
-
-
-        /* 
-        Review Form Section 
-            This section contains styling for the form that users can fill out if they want to
-            leave their own review.
-
-            Users will input their:
-                Title
-                Subheading
-                Name
-                main body text of their review
-                a score
-                an image file of the biscuit in question
-        */
-
-        #currentScore {
-            margin-top: 0;
-            padding-top: 0.5em;
-            font-size: 4em;
-        }
-
-
-#reviewImage_container,
-#returnToTop {
+/* REVIEW - contains review heads and bodies */
+.review_Div {
     position: relative;
     display: grid;
-    margin: 0 auto;
-    height: 7em;
-    width: 16em;
-    background: #cd5753;
-    border-radius: 2em;
-    color: #f1e5e5;
-    border: solid #2c0907 0.25em;    
-    transition: 500ms;        
+    height: 40em;
+    width: 90%;
+    margin: 0 auto 4em;
 }
 
-#reviewImage_container:hover {
-    background: #ec8e4f;
-    box-shadow: 0 0 0.5em #ec8e4f;
-    border: solid rgb(229, 236, 208) 0.25em;
-}
-
-#reviewImage_container h3 {
-    color: #f1e5e5;
-    font-size: 1.5em;
-    margin: 0.5em;
-    font-family: montserrat;
-    font-weight: 600;
-    text-align: center;
-}
-
-#reviewImage {
-    margin: 0 auto;
+/* REVIEW HEAD - contains title, subtitle, author, score and image */
+.review_head {
     position: absolute;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    outline: none;
-    display: inline;
-    cursor: pointer;
+    border: var(--color-dark) solid 0.5em;
+    box-shadow: #2c090777 1.25em 0 0.5em;
+    z-index: 1;
+    display: grid;
+    height: inherit;
+    width: 30em;
+    background: var(--color-mid);
+    border-radius: var(--rounding-div);
+    transition: 500ms;
 }
 
+.review_head h1 {
+    font-size: 4em;
+}
+
+.review_head p {
+    max-width: 100%;
+    font-size: 2em;
+    margin: 0 auto;
+    max-height: 3em;
+}
+
+.review_head img {
+    max-width: 20em;
+    max-height: 15em;
+    overflow: hidden;
+    display: grid;
+    margin: 0 auto;
+    border: 0.5em solid var(--color-dark);
+    border-radius: var(--rounding-div);
+}
+
+.score_container {
+    position: relative;
+    display: grid;
+    font-family: grandstander;
+    background: #41241c;
+    height: 4em;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5em;
+}
+
+.score_text {
+    padding: 0.5em;
+    font-family: var(--font-title);
+    margin: auto;
+    color: var(--color-mid);
+}
+
+.score_bar {
+    position: inherit;
+    display: grid;
+    height: 60%;
+    margin: 0.8em 5% 0;
+    border-radius: var(--rounding-section);
+    /* needs to start at these values for animation */
+    background: red;
+    width: 0;
+    transition: 500ms;
+}
+
+.review_Body {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    height: 60%;
+    width: 60em;
+    margin: auto 0;
+    background: var(--color-dark);
+    border-radius: var(--rounding-div);
+    overflow: hidden;
+    border: var(--color-mid) solid 0.5em;
+    left: 32%;
+
+    transition: 500ms;
+}
+
+.review_Body p {
+    position: inherit;
+    right: 0;
+    padding: 1rem 1em;
+    color: var(--color-mid);
+    text-align: left;
+    max-width: 100%;
+    font-size: 2em;
+}
+
+/*
+ALTERNATE REVIEW DIVS
+    every second review will have inverted colors and the head will appear on the right,
+    not the left.
 
 
+*/
 
+[alt=altReview] .review_head {
+    border-color: var(--color-mid);
+    right: 0;
+    box-shadow:#2c090777 -1.25em 0 0.5em;
+    background-color: var(--color-dark);
+}
 
+[alt=altReview] h1,
+[alt=altReview] p {
+    color: var(--color-mid);
+}
 
+[alt="altReview"] .score_container {
+    background-color: var(--color-mid);
+}
 
-        
+[alt="altReview"] .score_text {
+    color: var(--color-dark);
+}
+
+[alt=altReview] .review_Body {
+    border-color: var(--color-dark);
+    background-color: var(--color-mid);
+    text-align: right;
+    left: 0;
+}
+
+[alt=altReview] .review_Body p {
+    color: var(--color-dark);
+    left: 0;
+}
+
+[alt="altReview"] img {
+    border-color: var(--color-mid);
+}

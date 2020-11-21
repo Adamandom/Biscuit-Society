@@ -1,43 +1,5 @@
 /* style for the contact page */
 
-.contact_Section {
-    display: grid;
-    margin: 4em auto 0;
-    width: 100em;
-    background: #eec062;
-
-    border-radius: 5em;
-}
-
-.contact_Section h1 {
-    color: #41251d;
-    padding: 1em 0 0;
-    margin: 0 auto;
-    font-size: 8em;
-    font-family: Grandstander;
-}
-
-.contact_Section h2 {
-    color: #41251d;
-    padding: 1em 0 0;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 4em;
-    font-family: Grandstander;
-}
-
-.contact_Section p {
-    color: #41251d;
-    margin: 0 auto;
-    font-size: 3em;
-    font-weight: 600;
-    width: 80%;
-    padding: 1em 0;
-    text-align: center;
-    font-family: Montserrat;
-}
-
-
 iframe {
     margin: 0;
     position: relative;
@@ -54,13 +16,13 @@ iframe:hover {
 .contact_map {
     margin: 0 auto 8em;
     display: grid;
-    height: 35em;
-    padding: 0em;
-    border-radius: 5em;
+    height: 30em;
+    border-radius: var(--rounding-div);
     overflow: hidden;
-    background: #41251d;
-    border: solid #41251d 1em;
-    transition: 500ms;
+    background: var(--color-dark);
+    border: var(--border-05);
+    border-width: 1em;
+    
 }
 
 .contact_list_container {
@@ -69,32 +31,38 @@ iframe:hover {
     width: 80%;
 }
 
-.contact_section ol {
+
+.contact_Section ol {
     display: inline;
     margin: 0 auto;
-    
+    width: 100em;
 }
 
 .contact_Section li {
     list-style-type: none;
-    width: 50%;
+    width: 40%;
     float: left;
 }
 
+.contact_Section p {
+    max-width: 80%;
+}
+
 .contact_media_container {
-    width: 80%;
+    width: 90%;
     display: grid;
     margin: 2em auto 8em;
-    height: 40em;
-
-    border: solid #41251d 1em;
-    background: #41251d;
-    border-radius: 2.5em;
+    height: 30em;
+    background: var(--color-dark);
+    border-radius: var(--rounding-div);
 }
 
 .contact_media {
+    border: var(--border-05);
+    border-width: 1em;
     overflow: auto;
-    border-radius: 2em;
+    border-radius: var(--rounding-div)
+    
 }
 
 .contact_media::-webkit-scrollbar {

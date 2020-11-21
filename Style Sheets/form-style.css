@@ -1,123 +1,76 @@
 /*
-below is the styles for forms
-This is used in the review and contact pages
+Form Style Sheets
+
+This page contains styles for forms used in the review and contact pages
 things are subject to change, feel free to override anything with your own style sheets
  - Adam
 */
 
-
-.form_Section {
-    position: relative;
-    display: grid;
-    min-height: 80em;
-    width: 100em;
-    background: #eec062;
-    border-radius: 5em;
-    margin: 4em auto 0;
-
-    color: #2c0907;
-    font-family: Grandstander;
-    text-align: center;
-}
-
-
-.form_Section h1 {
-    color: #41241c;
-    font-size: 8em;
-    padding: 1em 0 0;
-}
-
-.form_Section p {
-    color: #41251d;
-    margin: 0 auto;
-    font-size: 3em;
-    font-weight: 600;
-    width: 80%;
-    padding: 1em 0;
-    text-align: center;
-    font-family: Montserrat;
-}
-
 form {
     display: grid;
-    margin: 0 auto;
-}
-
-
-form label {
-    display: grid;
-    font-family: montserrat;
-    font-size: 2em;
-    font-weight: 800;
-    color: #41251d;
-    margin: 0 auto;
+    margin:  4em auto 0;  
 }
 
 form input,
 form textarea {
+    cursor: text;
     display: grid;
     margin: 0 auto;
-    background: #cd5753;
-    font-family: montserrat;
-    color: #fff9f9;
-    border: none;
-    outline: none;
+    color: var(--color-bright);
+    background: var(--color-div);
+
+    font-family: var(--font-body);
     text-indent: 1em;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: var(--weight-mid);
+    
+    border: var(--border-05);
+    border-width: 0.25em;
+    border-radius: var(--rounding-section)
 }
 
 form h3 {
-    margin: 0 auto;
-    font-size: 2em;
-    color: #2c0907;
-    font-weight: 700;
+    font-size: 2.5em;
 }
 
 form input {
-    border: solid 0.5rem #41251d;
     height: 2em;
     width: 15em;
-    font-weight: 600;
-    margin: 0 auto;
-    border-radius: 5em;
-
 }
 
-
 ::placeholder {
-    color: #fff9f9;
+    color: var(--color-bright);
     opacity: 0.5;
 }
 
-form textarea {
-    border: solid 0.5rem #41251d;
+form textarea { 
     height: 5em;
     width: 30em;
     font-size: 2em;
     text-indent: 0;
     padding: 1em;
-    border-radius: 2em;
+    border-radius: var(--rounding-div);
     resize: none;
 }
 
 form input[type=range] {
     appearance: none;
-    width: 30em;
-    height: 4em;
+    width: 17.5em;
+    height: 2.5em;
     overflow: hidden;
-    border-radius: 2em;
+    border-radius: var(--rounding-section);
     cursor: pointer;
     transition: 300ms;
-    font-size: 1em;
 }
 
 form input[type=range]::-webkit-slider-thumb {
-    border-radius: 5em;
+    border-radius: var(--rounding-section);
     appearance: none;
-    width: 3em;
-    height: 3em;
-    background: #fff9f9;
+    width: 2em;
+    height: 2em;
+    border: var(--border-05);
+    border-width: 0.25em;
+    background: var(--color-bright);
 }
 
 form input[type=submit],
@@ -125,14 +78,17 @@ form input[type=button] {
     height: 5em;
     width: 20em;
     cursor: pointer;
-    transition: 300ms;
     text-align: center;
+    border: var(--border-05);
+    border-width: 0.25em;
+
+    transition: 300ms;
 }
 
 form input[type=submit]:hover {
-    background: #4ee630;
-    border: solid #fff9f9 0.5rem;
-    box-shadow: 0 0 0.5em #4ee630;
+    background: var(--color-submit);
+    border-color: var(--color-bright);
+    box-shadow: 0 0 0.5em var(--color-submit);
 }
 
 form input[type=button] {
@@ -140,13 +96,55 @@ form input[type=button] {
     border-radius: 2em;
 }
 
-form input[type=file] {
-    margin: -1em 0 0;
+form input[type=button]:hover {
+    background: var(--color-hovered);
+    box-shadow: 0 0 0.5em var(--color-hovered);
 }
 
-form input[type=button]:hover {
-    background: #ec8e4f;
-    border: solid #fff9f9 0.5rem;
-    box-shadow: 0 0 0.5em #ec8e4f;
+/* Review Form Content */
 
+#reviewImage_container {
+    position: relative;
+    display: grid;
+    margin: 0 auto;
+
+    height: 10em;
+    width: 20em;
+    background: var(--color-div);
+    border-radius: var(--rounding-section);
+    border: var(--border-05);
+    cursor: pointer;
+
+    transition: 500ms;
+}
+
+#reviewImage_container:hover {
+    background: var(--color-hovered);
+    box-shadow: 0 0 0.5em var(--color-hovered);
+    border-color: var(--color-bright);
+}
+
+#reviewImage_container p {
+    color: var(--color-bright);
+    font-size: 2em;
+    max-width: 100%;
+    display: grid;
+    margin: auto;
+}
+
+#reviewImage {
+    margin: 0 auto;
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    display: inline;
+    cursor: pointer;
+}
+
+/* "label" that shows current value of range slider */
+#currentScore {
+    font-family: var(--font-title);
+    font-size: 5em;
 }

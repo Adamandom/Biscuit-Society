@@ -1,0 +1,102 @@
+/* 
+Recipe Style
+
+Contains styling for the recipe page
+*/
+/* 
+:root {
+    font-size: 14px;
+    
+    --font-title: Grandstander;
+    --font-body: montserrat;
+
+    --weight-bold: 800;
+    --weight-mid: 600;
+
+    --color-section: #eec062;
+    --color-div: #cd5753;
+
+    --color-dark: #41241c;
+    --color-mid: #f7d299;
+    --color-bright: #f1e5e5;
+
+    --color-shadow: #2c0907;
+    --color-hovered: #ec8e4f;
+    --color-submit: #4ee630;
+
+    --rounding-section: 5em;
+    --rounding-div: 2.5em;
+    --border-05: solid 0.5em #41241c;
+
+} */
+
+.recipe_section div {
+    width: 80%;
+    margin: 8em auto;
+    border-radius: var(--rounding-section);
+}
+
+.recipe_div {
+    background-color: var(--color-div);
+    border: var(--border-05);
+}
+
+
+
+.recipe_div img {
+    min-height: 10em;
+    min-width: 40%;
+    max-height: 20em;
+    max-width: 80%;
+    margin: 4em auto 4em;
+    display: grid;
+
+    border: var(--border-05);
+    border-radius: var(--rounding-div);
+}
+
+.recipe_div h1 {
+    max-width: 80%;
+    color: var(--color-bright);
+}
+
+.recipe_div h2 {
+    padding: 0.5em 0 0.25em;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.recipe_div h2:hover {
+    color: var(--color-div);
+}
+
+.recipe_div ol {
+    display: none;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 4em;
+}
+
+.recipe_div li {
+    font-family: var(--font-body);
+    margin: 0 auto;
+    font-size: 2em;
+    color: var(--color-dark);
+    font-weight: var(--weight-mid);
+}
+
+/* div containing text */
+.recipe_text_div {
+    width: 80%;
+    background-color: var(--color-section);
+    border: var(--border-05);
+}
+
+/* p text containing the recipe */
+.recipe_method {
+    display: none;
+    font-size: 2em;
+    max-width: 90%;
+    padding: 0 0 2em;
+}
