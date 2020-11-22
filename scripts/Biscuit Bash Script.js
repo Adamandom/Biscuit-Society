@@ -117,7 +117,7 @@ const cookies = [
     },
     {
         name: "A Nibble to the Past",
-        image: contentPath + "nibbleZelda.svg",
+        image: contentPath + "NibbleZelda.svg",
         code: function() {
             return 1;
             // code block
