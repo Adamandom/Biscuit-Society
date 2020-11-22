@@ -93,6 +93,9 @@
 
 .main_panel,
 .side_panel {
+    transform: translateX(-50%);
+    position: absolute;
+    display: inline;
     height: 50em;
     border-radius: var(--rounding-section);
     border: var(--border-05);
@@ -124,8 +127,12 @@
     display: grid;
     margin: 0 auto;
     background-color: var(--color-dark);
-    height: 5em;
-    width: 20em;
+    height: 5rem;
+    width: 20rem;
+    border-radius: var(--rounding-div);
+    color: var(--color-bright);
+    text-align: center;
+    font-size: 3em;
 }
 
 
@@ -143,10 +150,56 @@
 .side_panel ol {
     height: 50em;
     margin: 4em auto 0;
-    column-gap: 2em;
+    
 }
 
-.side_panel li {
-    display: inline-block;
+.side_panel input {
+    display: grid;
+    margin: 0 auto 2em;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.side_panel label {
+    color: var(--color-bright);
+    font-size: 2em;
+    display: grid;
+    margin: 0 auto;
+}
+
+#nextUpgrade,
+#nextCookie {
+    display: grid;
+    margin: 2em auto;
+    width: 12em;
+    height: 12em;
+}
+
+.commitChangeButton {
+    display: grid;
+    margin: 0 auto;
+    background: var(--color-section);
+    height: 5em;
+    width: 100em;
+    border-radius: var(--rounding-div);
+}
+
+#save_button {
+    display: grid;
+    margin: auto;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    
+    background-color: var(--color-submit);
+    font-size: 3em;
+    border-radius: var(--rounding-div);
+    text-align: center;
+    font-family: var(--font-body);
+    color: var(--color-bright);
+    border: var(--border-05);
+    border-width: 0.5rem;
 
 }

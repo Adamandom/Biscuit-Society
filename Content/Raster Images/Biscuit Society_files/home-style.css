@@ -1,0 +1,74 @@
+
+/* Style for the Home Page */
+
+.intro_section img {
+    height: 40em;
+}
+
+/* Middle Section with links */
+section ul {
+    margin-left: 6.75em;
+    height: 20em;
+    padding: 5em 2.5em;
+}
+
+section li {
+    display: inline-block;
+    position: relative;
+    background: var(--color-div);
+    border: var(--border-05);
+    width: 45%;
+    height: 20em;
+    border-radius: var(--rounding-div);
+}
+
+section h1 {
+    max-width: 80%;
+    margin: 0;
+    padding: 0.5em 0 0 0.5em;
+    text-align: left;
+    font-size: 4em;
+    color: var(--color-section);
+}
+
+section p {
+    float: left;
+    margin-left: 1.5em;
+    text-align: left;
+    width: 50%;
+    font-size: 2em;
+    color: var(--color-mid);
+}
+
+.section_home img {
+    position: absolute;
+    float: right;
+    width: 12em;
+    height: 12em;
+
+    margin-left: 1.5em;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.section_icon:hover {
+    transform: scale(1.2);
+}
+
+/* Alternate layouts for biscuit div */
+
+[alt = "altDiv"] h1 {
+    padding-left: 1.5em;
+    text-align: right;
+}
+
+[alt = "altDiv"] p {
+    text-align: right;
+    margin-right: 1.5em;
+    float: right;
+}
+
+[alt = "altDiv"] img {
+    float: left;
+    margin-left: 3em;
+}

@@ -2,7 +2,7 @@
 // - Adam
 
 // Content path for images
-var lightModeContentPath = "Content/Vector Graphics/";
+var contentPath = "Content/Vector Graphics/";
 
 var darkButton = document.getElementById("darkModeButton");
 var contrastButton = document.getElementById("contrastModeButton");
@@ -76,25 +76,15 @@ const contrastTheme = `
 }
 
 header {
+    filter: contrast(1.5);
     box-shadow: black 0 0 0 1em;
 }
-
-.header_Main {
-    filter: hue-rotate(240deg) contrast(5) invert(1) saturate(10);
+nav {
+    filter: saturate(0) contrast(2;
 }
-
-.nav_Tab,
-.section_icon {
-    filter: invert(1) saturate(0) contrast(5);
+.header_buttons {
+    filter: saturate(0) hue-rotate(90deg);
 }
-
-.nav_HomeTab,
-.game_section img,
-.header_buttons,
-.intro_section img {
-    filter: saturate(0) contrast(5);
-}
-
 `;
 
 // Turns DM on
@@ -106,13 +96,13 @@ function toggleDarkMode() {
     if (settings[0] === false) {
         // turn off 
         settings[0] = true;
-        darkButton.src = lightModeContentPath + "darkOff.svg";
+        darkButton.src = contentPath + "darkOff.svg";
         root.innerHTML = "";
     }
     else {
         // turn on 
         settings[0] = false;
-        darkButton.src = lightModeContentPath + "darkOn.svg";
+        darkButton.src = contentPath + "darkOn.svg";
         // add theme to root
         document.body.appendChild(root);
         root.innerHTML = darkTheme;
@@ -128,7 +118,7 @@ function toggleContrastMode() {
     if (settings[1] === false) {
         // turn off 
         settings[1] = true;
-        contrastButton.src = lightModeContentPath + "contrastOff.svg";
+        contrastButton.src = contentPath + "contrastOff.svg";
         root.innerHTML = "";
 
         // return constant graphics to normal
@@ -136,7 +126,7 @@ function toggleContrastMode() {
     else {
         // turn on 
         settings[1] = false;
-        contrastButton.src = lightModeContentPath + "contrastOn.svg";
+        contrastButton.src = contentPath + "contrastOn.svg";
         // add theme to root
         document.body.appendChild(root);
         root.innerHTML = contrastTheme;

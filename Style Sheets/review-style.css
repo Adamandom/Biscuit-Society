@@ -53,7 +53,7 @@ This page contains styles specific to the review page
     position: relative;
     display: grid;
     font-family: grandstander;
-    background: #41241c;
+    background: var(--color-dark);
     height: 4em;
     width: 90%;
     margin: 0 auto;
