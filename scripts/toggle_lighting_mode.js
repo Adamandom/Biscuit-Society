@@ -134,7 +134,7 @@ function toggleDarkMode() {
         // turn on 
         settings.darkMode = false;
         darkButton.src = lightModeContentPath + "darkOn.svg";
-        header.src = lightModeContentPath + "Header-dark.svg";
+        header.src = lightModeContentPath + "header-dark.svg";
         // add theme to root
         document.body.appendChild(root);
         root.innerHTML = darkTheme;
