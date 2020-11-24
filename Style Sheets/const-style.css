@@ -60,6 +60,7 @@ body {
 
 
 header {
+    background-color: var(--color-dark);
     position: relative;
     z-index: 1;
     margin: 2em auto;

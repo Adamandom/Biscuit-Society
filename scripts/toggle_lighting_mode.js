@@ -43,10 +43,10 @@ span {
 }
 
 .nav_Tab {
-    filter: hue-rotate(115deg);
+    filter: hue-rotate(130deg);
 }
 .nav_HomeTab {
-    filter: hue-rotate(115deg);
+    filter: hue-rotate(130deg);
 }
 
 .intro_graphic {
