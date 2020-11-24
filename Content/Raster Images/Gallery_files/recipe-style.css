@@ -1,28 +1,59 @@
-/*
-Recipe Style Sheet
+html {
+    font-size: 14px;
 
-This page contains styles for the recipe page.
- - Adam
-*/
+    --font-title: Grandstander;
+    --font-body: Montserrat;
 
+    --weight-bold: 800;
+    --weight-mid: 600;
 
-.recipe_section h1 {
-    margin-bottom: 0.5em;
+    --color-section: #eec062;
+    --color-div: #cd5753;
+
+    --color-dark: #41241c;
+    --color-mid: #f7d299;
+    --color-bright: #f1e5e5;
+    --color-span: #cd5753;
+
+    --color-shadow: #41241c99;
+    --color-hovered: #ec8e4f;
+    --color-submit: #4ee630;
+
+    --rounding-section: 5em;
+    --rounding-div: 2.5em;
+    --border-05: solid 0.5em #41241c;
+
 }
 
-/* contains two reviews that are recipe  */
+/*
+Recipe Page Style
+*/
+
+.recipe_section {
+    border-radius: var(--rounding-section);
+    min-height: fit-content;
+}
+
+.recipe_section h1 {
+    display: grid;
+    margin-bottom:0.5em;
+}
+
+
 .recipe_container {
     display: inline;
     margin: 0 auto 6em;
+    height: fit-content;
     width: 80%;
 }
 
-/* contains all review content for a recipe */
+
 .recipe_div {
     position: relative;
     float: left;
-    background: var(--color-div);
+    background: var(--color-span);
     width: 30em;
+
     padding: 3em;
     text-align: center;
     border-radius: var(--rounding-section);
@@ -39,12 +70,16 @@ This page contains styles for the recipe page.
 }
 
 .recipe_div h1 {
+    font-family: grandstander;
+    font-weight: 800;
     font-size: 4em;
     color: var(--color-section);
-    margin: -0.5em auto 0.5em;
+    margin-bottom: 0.5em;
 }
 
+
 .recipe_section h2 {
+    color: var(--color-dark);
     padding: 0.5em 0 0.25em;
     transition: 500ms;
     font-size: 4em;
@@ -56,13 +91,12 @@ This page contains styles for the recipe page.
 }
 
 .recipe_div h3 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-weight: var(--weight-mid);
     font-size: 2.5em;
     color: var(--color-section);
 }
 
-/* container for text (for ingredients and method) */
 .recipe_text_div {
     width: 90%;
     background-color: var(--color-section);
@@ -79,27 +113,31 @@ This page contains styles for the recipe page.
     padding: 1em 0 4em;
 }
 
-.recipe_div p {
-    display: none;
-    max-width: 90%;
-    font-size: 1em;
+.recipe_section ol {
+    display: grid;
+    position: absolute;
+    top: 25em;
+    background: magenta;
 }
 
+.recipe_div p {
+    display: none;
+}
 .recipe_div li,
 .recipe_div p {
     margin: 0 auto;
-    padding: 0.25em 0;
+    padding-top: 0.25em;
+    padding-bottom: 1em;
     font-family: var(--font-body);
     color: var(--color-dark);
     font-size: 2em;
 }
 
-/* only used for ingredient links */
 a {
     text-decoration: none;
     color: inherit;
-    font-weight: var(--weight-bold);
     transition: 300ms;
+    font-weight: var(--weight-bold);
 }
 
 a:hover {

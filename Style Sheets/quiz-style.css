@@ -1,29 +1,49 @@
-#container {
-  margin: 0 auto;
+
+html {
+  font-size: 14px;
+  
+  --font-title: Grandstander;
+  --font-body: Montserrat;
+
+  --weight-bold: 800;
+  --weight-mid: 600;
+
+  --color-section: #eec062;
+  --color-div: #cd5753;
+
+  --color-dark: #41241c;
+  --color-mid: #f7d299;
+  --color-bright: #f1e5e5;
+  --color-span: #cd5753;
+
+  --color-shadow: #41241c99;
+  --color-hovered: #ec8e4f;
+  --color-submit: #4ee630;
+
+  --rounding-section: 5em;
+  --rounding-div: 2.5em;
+  --border-05: solid 0.5em #41241c;
+
+}
+
+/*
+    Quiz Style
+    This file contains all the style for the Quiz
+    - Adam
+*/
+
+
+.quiz_section {
   opacity: 0;
-  width: 98em;
-  background: #eec062;
-  padding: 2em;
-  border-radius: 5em;
-  box-shadow: #2c0907 0 0 2em; 
-  color: #41241c;
+  color: var(--color-dark);
   transition: 5s;
 }
 
-#container h1 {
-  display: grid;
-  padding-top: 0.25em;
-  font-size: 8em;
-  font-family: Grandstander;
-  font-weight: 800;
-  text-align: center;
-}
-
 #text {
-  font-family: montserrat;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: var(--weight-mid);
   font-size: 2.5em;
-  margin: 1em auto;
+  margin: 0.5em auto 0;
   text-align: center;
   width: 80%;
 }
@@ -31,25 +51,29 @@
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(1, auto);
-  gap: 2em;
-  margin-top: 1em;
+  gap: 3em;
+  margin: 1em 0 4em;
 }
 
 .btn {
-  background-color: #cd5753;
-  border: 0.25em solid  #41241c;
-  border-radius: 5em;
-  padding: 0.5em;
-  color: white;
-  outline: none;
-  font-family: montserrat;
-  font-weight: 400;
+  margin: 0 auto;
+  background-color: var(--color-div);
+  border:var(--border-05);
+  border-width: 0.25em;
+  border-radius: var(--rounding-section);
+  padding: 0.5rem;
+  color: var(--color-bright);
+
+  font-family: var(--font-body);
+  font-weight: var(--weight-mid);
   font-size: 2em;
-  transition: 300ms;
   cursor: pointer;
+  width: 80%;
+
+  transition: 300ms;
 }
 
 .btn:hover {
-  background-color: #ec8e4f;
-  color: #41241c;
+  background-color: var(--color-hovered);
+  color: var(--color-dark);
 }

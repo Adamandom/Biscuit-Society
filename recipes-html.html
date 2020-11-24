@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Title and Favicon -->
-        <title>Recipes</title>
-        <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg" />
+<html lang="en">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<head>
+    <!-- Titles and Icons-->
+    <title>Recipes</title>
+    <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg" />
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="Style Sheets/recipe-style.css">
-        <link rel="stylesheet" href="Style Sheets/const-style.css">
-        <link rel="stylesheet" href="Style Sheets/form-style.css">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="Style Sheets/const-style.css">
+    <link rel="stylesheet" href="Style Sheets/recipe-style.css">
 
-        <!-- Meta Data -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
-    </head>
-    
-    <body>
-        
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
     <!-- Header -->
     <header>
-        <img src="Content/Vector Graphics/Header.svg" alt="Header" class="header_Main">
+        <img src="Content/Vector Graphics/Header.svg" alt="Header" id="header_Main">
 
         <a href="https://www.instagram.com/robertgordonuni/"><img src="Content/Vector Graphics/SocialIcon3.svg"
                 alt="RGU" style="left: 67em" class="header_buttons"></a>
-        <img onclick="toggleContrastMode()" src="Content/Vector Graphics/contrastOff.svg" alt="contrastModeToggle" style="left: 77em"
-                class="header_buttons" id="contrastModeButton">
+        <img onclick="toggleContrastMode()" src="Content/Vector Graphics/contrastOff.svg" alt="contrastModeToggle"
+            style="left: 77em" class="header_buttons" id="contrastModeButton">
 
-        <img onclick="toggleDarkMode()" src="Content/Vector Graphics/darkOff.svg" alt="darkModeToggle" style="left: 87em"
-                class="header_buttons" id="darkModeButton">
+        <img onclick="toggleDarkMode()" src="Content/Vector Graphics/darkOff.svg" alt="darkModeToggle"
+            style="left: 87em" class="header_buttons" id="darkModeButton">
     </header>
 
     <!-- Nav -->
@@ -72,186 +72,262 @@
         </ul>
     </nav>
 
-    <!-- Intro Section -->
     <section class="intro_section">
+        <img src="Content/Vector Graphics/recipe graphic.svg" alt="intro graphic" class="intro_graphic">
+        <p class="intro_subheading">Try your hand at baking your own cookies with recipes from our members!</p>
+    </section>
+
+    <!-- Recipe Section -->
+    <section class="recipe_section">
         <h1>Recipes!</h1>
-        <p>Take a look at some of our society's favorite recipes!</p>
-    </section>
+        <div class="recipe_container">
 
-    <section class="recipe_section">
-        <div class="recipe_div">
-            <h1>Gingerbread Men</h1>
-            <img src="Content/Raster Images/chocolate chip cookies.jpg" alt="Gingerbread men"> 
-            
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Ingredients</h2>
-                <ol>
-                    <li>350g/12oz plain flour, plus extra for rolling out</li>
-                    <li>1 tsp bicarbonate of soda</li>
-                    <li>2 tsp ground ginger</li>
-                    <li>1 tsp ground cinnamon</li>
-                    <li>125g/4½oz butter</li>
-                    <li>175g/6oz light soft brown sugar</li>
-                    <li>1 free-range egg</li>
-                    <li>4 tbsp golden syrup</li>
-                </ol>
+            <div class="recipe_div" style="left: 0;">
+                <h1>Gingerbread Men</h1>
+                <img src="Content/Raster Images/gingerbread.jpg" />
+                <h3><i>"A real winter warmer"</i></h3>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Ingredients</h2>
+                    <ul>
+                        <li>
+                            350g <a href="https://www.bbc.co.uk/food/plain_flour">plain flour</a>, plus extra for
+                            rolling out
+                        </li>
+                        <li>
+                            1 tsp <a href="https://www.bbc.co.uk/food/bicarbonate_of_soda">bicarbonate of soda</a>
+                        </li>
+                        <li>
+                            2 tsp <a href="https://www.bbc.co.uk/food/ginger_ground">ground ginger</a>
+                        </li>
+                        <li>
+                            1 tsp ground <a href="https://www.bbc.co.uk/food/cinnamon">cinnamon</a>
+                        </li>
+                        <li>
+                            125g oz <a href="https://www.bbc.co.uk/food/butter">butter</a>
+                        </li>
+                        <li>
+                            175g light soft <a href="https://www.bbc.co.uk/food/brown_sugar">brown sugar</a>
+                        </li>
+                        <li>
+                            1 free-range <a href="https://www.bbc.co.uk/food/egg">egg</a>
+                        </li>
+                        <li>
+                            4 tbsp <a href="https://www.bbc.co.uk/food/golden_syrup">golden syrup</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Method</h2>
+                    <p>
+                        Sift together the flour, bicarbonate of soda, ginger and cinnamon and pour into the bowl of a food processor. Add
+                        the butter and blend until the mix looks like breadcrumbs. Stir in the sugar.
+                        <br><br>
+                        Lightly beat the egg and golden syrup together, add to the food processor and pulse until the mixture clumps
+                        together. Tip the dough out, knead briefly until smooth, wrap in cling film and leave to chill in the fridge for 15
+                        minutes.
+                        <br><br>
+                        Preheat the oven to 180C/160C Fan/Gas 4. Line two baking trays with greaseproof paper.
+                        Roll the dough out to a 0.5cm/¼in thickness on a lightly floured surface. Using cutters, cut out the gingerbread men
+                        shapes and place on the baking tray, leaving a gap between them.
+                        <br><br>
+                        Bake for 12–15 minutes, or until lightly golden-brown. Leave on the tray for 10 minutes and then move to a wire rack
+                        to finish cooling. When cooled decorate with the writing icing and cake decorations, if using.
+                    </p>
+                </div>
             </div>
-             
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Method</h2>
-                <p class="recipe_method">
-                    Sift together the flour, bicarbonate of soda, ginger and cinnamon and pour into the bowl of a food processor. Add
-                    the butter and blend until the mix looks like breadcrumbs. Stir in the sugar.
-                    Lightly beat the egg and golden syrup together, add to the food processor and pulse until the mixture clumps
-                    together. Tip the dough out, knead briefly until smooth, wrap in cling film and leave to chill in the fridge for 15
-                    minutes.
-                    <br><br>
-                    Preheat the oven to 180C/160C Fan/Gas 4. Line two baking trays with greaseproof paper.
-                    Roll the dough out to a 0.5cm/¼in thickness on a lightly floured surface. Using cutters, cut out the gingerbread men
-                    shapes and place on the baking tray, leaving a gap between them.
-                    Bake for 12–15 minutes, or until lightly golden-brown. Leave on the tray for 10 minutes and then move to a wire rack
-                    to finish cooling. When cooled decorate with the writing icing and cake decorations, if using.
-                </p>
+
+            <div class="recipe_div" style="left: 6em;">
+                <h1>Chocolate Chip Cookies</h1>
+                <img src="Content/Raster Images/chocolate chip cookies.jpg" />
+                <h3><i>"An American Favorite"</i></h3>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Ingredients</h2>
+                    <ul>
+                        <li>
+                            275g unsalted <a href="https://www.bbc.co.uk/food/butter">butter</a>, softened
+                        </li>
+                        <li>
+                            275g soft light <a href="https://www.bbc.co.uk/food/brown_sugar">brown sugar</a>
+                        </li>
+                        <li>
+                            225g granulated <a href="https://www.bbc.co.uk/food/sugar">sugar</a>
+                        </li>
+                        <li>
+                            2 large free-range <a href="https://www.bbc.co.uk/food/egg">eggs</a>
+                        </li>
+                        <li>
+                            1 tbsp <a href="https://www.bbc.co.uk/food/vanilla_extract">vanilla extract</a>
+                        </li>
+                        <li>
+                            475g <a href="https://www.bbc.co.uk/food/plain_flour">plain flour</a>
+                        </li>
+                        <li>
+                            2 tsp <a href="https://www.bbc.co.uk/food/baking_powder">baking powder</a>
+                        </li>
+                        <li>
+                            300g <a href="https://www.bbc.co.uk/food/milk_chocolate">milk chocolate</a>, chopped roughly
+                            into chunks
+                        </li>
+                        <li>
+                            <a href="https://www.bbc.co.uk/food/sea_salt">Sea salt</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Method</h2>
+                    <p>
+                        Heat the oven to 190C and line two baking sheets with non-stick baking paper.
+                        Put 150g softened salted butter, 80g light brown muscovado sugar and 80g granulated sugar into a bowl and beat until creamy.
+                        Beat in 2 tsp vanilla extract and 1 large egg.
+                        Sift 225g plain flour, 1/2 tsp bicarbonate of soda and 1/4 tsp salt into the bowl and mix it in with a wooden spoon.
+                        Add 200g plain chocolate chips or chunks and stir well.
+                        <br><br>
+                        Use a teaspoon to make small scoops of the mixture, spacing them well apart on the baking trays. This mixture should make about 30 cookies.
+                        Bake for 8–10 mins until they are light brown on the edges and still slightly soft in the centre if you press them.
+                        Leave on the tray for a couple of mins to set and then lift onto a cooling rack.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="recipe_container">
+
+            <div class="recipe_div" style="left: 0;">
+                <h1>Millionaire's Shortbread</h1>
+                <img src="Content/Raster Images/millionairesShortbread.jpg"/>
+                <h3><i>"A Scot's Delight"</i></h3>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Ingredients</h2>
+                    <ul>
+                        <li>225g <a href="https://www.bbc.co.uk/food/plain_flour">plain flour</a></li>
+                        <li>175g <a href="https://www.bbc.co.uk/food/butter">unsalted butter</a>, cold, cut into cubes</li>
+                        <li>75g <a href="https://www.bbc.co.uk/food/caster_sugar">caster sugar</a></li>
+                    </ul>
+                </div>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Method</h2>
+                    <p>
+                        Preheat the oven to 150C/300F/Gas 2. Line a 23cm/9in square cake tin with baking parchment.
+                        Combine the flour and butter cubes in a food processor and pulse until the mixture resembles fine breadcrumbs. (Alternatively, you can rub the butter in by hand.)
+                        Add in the caster sugar and pulse again until combined.
+                        <br><br>
+                        Tip the mixture into the lined cake tin and spread it out evenly with the back of a spoon. Then press the shortbread down firmly with your knuckles so that it is tightly packed in the tin.
+                        Bake the shortbread for 30 minutes or until very light golden brown. Set aside to cool.
+                        <br><br>
+                        Meanwhile, for the topping, heat the butter, condensed milk and golden syrup in a saucepan, stirring occasionally until the butter is melted and the mixture is smooth.
+                        Increase the heat and bring the mixture to the boil, stirring frequently. The caramel will thicken and turn golden-brown. Set aside to cool slightly, then pour over the cooled shortbread. Allow to cool completely.
+                        <br><br>
+                        Melt the chocolate in a bowl set over a pan of simmering water (ensure that the bottom of the bowl does not touch the water), stirring occasionally.
+                        Pour the melted chocolate over the caramel and set aside until the chocolate has cooled completely.
+                        Cut into squares and serve.
+                    </p>
+                </div>
+            </div>
+
+            <div class="recipe_div" style="left: 6em;">
+                <h1>Digestives</h1>
+                <img src="Content/Raster Images/digestives.jpg" />
+                <h3><i>"A timeless classic"</i></h3>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Ingredients</h2>
+                    <ul>
+                        <li>
+                            275g unsalted <a href="https://www.bbc.co.uk/food/butter">butter</a>, softened
+                        </li>
+                        <li>
+                            275g soft light <a href="https://www.bbc.co.uk/food/brown_sugar">brown sugar</a>
+                        </li>
+                        <li>
+                            225g granulated <a href="https://www.bbc.co.uk/food/sugar">sugar</a>
+                        </li>
+                        <li>
+                            2 large free-range <a href="https://www.bbc.co.uk/food/egg">eggs</a>
+                        </li>
+                        <li>
+                            1 tbsp <a href="https://www.bbc.co.uk/food/vanilla_extract">vanilla extract</a>
+                        </li>
+                        <li>
+                            475g <a href="https://www.bbc.co.uk/food/plain_flour">plain flour</a>
+                        </li>
+                        <li>
+                            2 tsp <a href="https://www.bbc.co.uk/food/baking_powder">baking powder</a>
+                        </li>
+                        <li>
+                            300g good-quality <a href="https://www.bbc.co.uk/food/milk_chocolate">milk chocolate</a>,
+                            chopped roughly into chunks
+                        </li>
+                        <li>
+                            <a href="https://www.bbc.co.uk/food/sea_salt">Sea salt</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recipe_text_div">
+                    <h2 onclick="showSection(this)">Method</h2>
+                    <p>
+                        Preheat the oven to 180°C. Line a cookie sheet with parchment paper.
+                        Combine the flour, baking powder, salt, and sugar in a mixing bowl and mix to combine the ingredients.
+                        Quickly, working with your fingertips or a blender, rub the butter into the dry ingredients until the mixture resembles breadcrumbs. Add the milk and work through to form a dough.
+                        <br><br>
+                        Turn out on a floured surface and roll to form a smooth dough. (IF your dough seems dry add a little more milk.)
+                        Using a well-floured rolling pin, roll the dough out to a bit more than 1/8 inch thick and cut into rounds, about 2 1/2 inches in diameter. You can keep rolling the scraps together to make additional biscuits.
+                        Transfer the biscuits to your baking pan and, if desired, prick the biscuits with a fork to create holes. Bake for 20 minutes until biscuits are pale gold.
+                        Cover and store in an airtight container for up to 1 week. Freeze the raw dough for up to 1 month. 
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="recipe_section">
-        <div class="recipe_div">
-            <h1>Chocolate brownies</h1>
-            <img src="Content/Raster Images/chocolate chip cookies.jpg" alt="Gingerbread men"> 
-            
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Ingredients</h2>
-                <ol>
-                    <li>225g/8oz butter</li>
-                    <li>450g/1lb caster sugar</li>
-                    <li>140g/5oz dark chocolate, broken into pieces</li>
-                    <li>5 free-range medium eggs</li>
-                    <li>110g/4oz plain flour</li>
-                    <li>55g/2oz cocoa powder</li>
-                </ol>
-            </div>
-             
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Method</h2>
-                <p class="recipe_method">
-                    Heat the oven to 190C/170C Fan/Gas 5. Line a 20x30cm/8x12in baking tin with baking paper.
-                    Gently melt the butter and the sugar together in a large pan. Once melted, take off the heat and add the chocolate. Stir until melted.
-                    Beat in the eggs, then stir in the rest of the ingredients.
-                    <br><br>
-                    Pour into the prepared tin and bake for 30–40 minutes, or until the top of the brownie is firm but the inside still feels soft.
-                    Take out of the oven and cool in the tin. Cut into 5cm/2in squares when cool. 
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="recipe_section">
-        <div class="recipe_div">
-            <h1>Victoria Sponge</h1>
-            <img src="Content/Raster Images/chocolate chip cookies.jpg" alt="Gingerbread men"> 
-            
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Ingredients</h2>
-                <ol>
-                    <li>225g/8oz butter or margarine, softened at room temperature</li>
-                    <li>225g/8oz caster sugar</li>
-                    <li>4 medium free-range eggs</li>
-                    <li>2 tsp vanilla extract</li>
-                    <li>225g/8oz self raising flour</li>
-                    <li>milk, to loosen</li>
-                    <li>200ml/7fl oz double cream</li>
-                    <li>250g/9oz mixed berries</li>
-                    <li>icing sugar, for dusting</li>
-                </ol>
-            </div>
-             
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Method</h2>
-                <p class="recipe_method">
-                    Preheat the oven to 180C/350F/Gas 4.
-                    Grease and line 2 x 18cm/7in cake tins with baking paper.
-                    Cream the butter and the sugar together in a bowl until pale and fluffy.
-                    Beat in the eggs, a little at a time, and stir in the vanilla extract.
-                    <br><br>
-                    Fold in the flour using a large metal spoon, adding a little extra milk if necessary, to create a batter with a soft dropping consistency.
-                    Divide the mixture between the cake tins and gently spread out with a spatula.
-                    Bake for 20-25 minutes, or until golden-brown on top and a skewer inserted into the middle comes out clean.
-                    <br><br>
-                    Remove from the oven and set aside for 5 minutes, then remove from the tin and peel off the paper. Place onto a wire rack.
-                    Whip the cream with a whisk or electric handheld mixer until it forms soft peaks when the whisk is removed.
-                    Sandwich the cakes together the whipped cream and berries. Dust with icing sugar.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="recipe_section">
-        <div class="recipe_div">
-            <h1>Millionaire's Shortbread</h1>
-            <img src="Content/Raster Images/chocolate chip cookies.jpg" alt="Gingerbread men"> 
-            
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Ingredients</h2>
-                <ol>
-                    <li>For the shortbread</li>
-                    <li>225g/8oz plain flour</li>
-                        <li>175g/6oz unsalted butter, cold, cut into cubes</li>
-                            <li>75g/2¾oz caster sugar</li>
-                </ol>
-            </div>
-             
-            <div class="recipe_text_div">
-                <h2 onclick="showSection(this)">Method</h2>
-                <p class="recipe_method">
-                    Preheat the oven to 150C/300F/Gas 2. Line a 23cm/9in square cake tin with baking parchment.
-                    Combine the flour and butter cubes in a food processor and pulse until the mixture resembles fine breadcrumbs.
-                    Add in the caster sugar and pulse again until combined.
-                    <br><br>
-                    Tip the mixture into the lined cake tin and spread it out evenly with the back of a spoon. Then press the shortbread
-                    down firmly with your knuckles so that it is tightly packed in the tin.
-                    Bake the shortbread for 30 minutes or until very light golden brown. Set aside to cool.
-                    <br><br>
-                    Meanwhile, for the topping, heat the butter, condensed milk and golden syrup in a saucepan, stirring occasionally
-                    until the butter is melted and the mixture is smooth.
-                    Increase the heat and bring the mixture to the boil, stirring frequently. The caramel will thicken and turn
-                    golden-brown. Set aside to cool slightly, then pour over the cooled shortbread. Allow to cool completely.
-                    Melt the chocolate in a bowl set over a pan of simmering water (ensure that the bottom of the bowl does not touch the
-                    water), stirring occasionally.
-                    <br><br>
-                    Pour the melted chocolate over the caramel and set aside until the chocolate has cooled completely.
-                    Cut into squares and serve.
-                </p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <p>
-            The Biscuit Society website was made by<span id="footer_Author">Harry Kellock</span>, Robert Tunn and Adam Sutherland
+        <p class="footer_text">
+            The Biscuit Society website was made by <span>Harry Kellock</span>, Robert Tunn and Adam Sutherland
         </p>
     </footer>
 
-        <script src="scripts/toggle_lighting_mode.js"></script>
-        <script>
-            function showSection(parent) {
-                let sibling = parent.nextElementSibling.style;
-                if (sibling.display !== "grid") {
-                    sibling.display = "grid";
-                }
-                else {
-                    sibling.display = "none";
-                }
+    <!-- to top button -->
+    <button id="returnToTop" onclick="goTo(0)">
+        To Top
+    </button>
+
+    <script src="scripts/toggle_lighting_mode.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap-4.4.1.js"></script>
+    <script src="scripts/scroll_to.js"></script>
+
+    <script>
+        document.body.addEventListener("onload", function() {
+            var height = Number(document.getElementsByClassName("recipe_section").style.height);
+            alert(height)
+        });
+    </script>
+    <script>
+        function showSection(parent) {
+            let sibling = parent.nextElementSibling.style;
+            if (sibling.display !== "grid") {
+                sibling.display = "grid";
+            } else {
+                sibling.display = "none";
             }
+        }
 
-            function takeMeTo(recipe) {
-                let location = recipe.className;
+        function takeMeTo(recipe) {
+            let location = recipe.className;
+        }
+    </script>
 
-            }
-        </script>
-
-
-    </body>
+</body>
 
 </html>

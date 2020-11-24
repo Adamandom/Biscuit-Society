@@ -6,12 +6,10 @@ var lightModeContentPath = "Content/Vector Graphics/";
 
 var darkButton = document.getElementById("darkModeButton");
 var contrastButton = document.getElementById("contrastModeButton");
-var header = document.getElementById("header_Main");
 
-var settings = {
-    darkMode: true,
-    contrastMode: true,
-};
+var darkMode = false;
+var contrastMode = false;
+var settings = [];
 
 // empty root added
 var root = document.createElement("style");
@@ -20,45 +18,28 @@ document.body.appendChild(root);
 // the color themes
 const darkTheme = `
 :root {
-    --color-section: #3dcb8c;
-    --color-div: #001923;
+    font-size: 14px;
 
-    --color-dark: #001923;
-    --color-mid: #3dcb8c;
-    --color-bright: #3bff9e;
+    --font-title: Grandstander;
+    --font-body: Montserrat;
 
-    --color-shadow: #00192377;
-    --color-hovered: #58011F;
-    --color-submit: #B70057;
+    --weight-bold: 800;
+    --weight-mid: 600;
 
-    --border-05: solid 0.5em #001923;
-}
+    --color-section: red;
+    --color-div: yellow;
 
-body {
-    background-color: var(--color-div);
-}
+    --color-dark: black;
+    --color-mid: brown;
+    --color-bright: white;
 
-span {
-    color: var(--color-hovered);
-}
+    --color-shadow: black;
+    --color-hovered: orange;
+    --color-submit: green;
 
-.nav_Tab {
-    filter: hue-rotate(115deg);
-}
-.nav_HomeTab {
-    filter: hue-rotate(115deg);
-}
-
-.intro_graphic {
-    filter: hue-rotate(180deg) brightness(0.8);
-}
-
-.header_buttons {
-    filter: hue-rotate(300deg);
-}
-
-.section_icon {
-    filter: invert(1);
+    --rounding-section: 5em;
+    --rounding-div: 2.5em;
+    --border-05: solid 0.5em black;
 }
 `;
 const contrastTheme = `
@@ -118,23 +99,20 @@ header {
 
 // Turns DM on
 function toggleDarkMode() {
-    if (settings.contrastMode === false) {
+    if (settings[1] === false) {
         toggleContrastMode();
     }
 
-    if (settings.darkMode === false) {
+    if (settings[0] === false) {
         // turn off 
-        settings.darkMode = true;
+        settings[0] = true;
         darkButton.src = lightModeContentPath + "darkOff.svg";
-        header.src = lightModeContentPath + "Header.svg";
-
         root.innerHTML = "";
     }
     else {
         // turn on 
-        settings.darkMode = false;
+        settings[0] = false;
         darkButton.src = lightModeContentPath + "darkOn.svg";
-        header.src = lightModeContentPath + "Header-dark.svg";
         // add theme to root
         document.body.appendChild(root);
         root.innerHTML = darkTheme;
@@ -143,13 +121,13 @@ function toggleDarkMode() {
 
 // toggles contrast mode on
 function toggleContrastMode() {
-    if (settings.darkMode === false) {
+    if (settings[0] === false) {
         toggleDarkMode();
     }
 
-    if (settings.contrastMode === false) {
+    if (settings[1] === false) {
         // turn off 
-        settings.contrastMode = true;
+        settings[1] = true;
         contrastButton.src = lightModeContentPath + "contrastOff.svg";
         root.innerHTML = "";
 
@@ -157,11 +135,16 @@ function toggleContrastMode() {
     }
     else {
         // turn on 
-        settings.contrastMode = false;
+        settings[1] = false;
         contrastButton.src = lightModeContentPath + "contrastOn.svg";
         // add theme to root
         document.body.appendChild(root);
         root.innerHTML = contrastTheme;
         document.getElementsByClassName("nav_Tab").style.filter = "saturate(10)";
     }   
+}
+
+// turn off either mode
+function turnOffMode() {
+
 }

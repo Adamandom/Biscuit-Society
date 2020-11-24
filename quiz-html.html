@@ -24,7 +24,7 @@
   <body>
     <!-- Header -->
     <header>
-      <img src="Content/Vector Graphics/Header.svg" alt="Header" class="header_Main">
+      <img src="Content/Vector Graphics/Header.svg" alt="Header" id="header_Main">
 
       <a href="https://www.instagram.com/robertgordonuni/"><img src="Content/Vector Graphics/SocialIcon3.svg"
               alt="RGU" style="left: 67em" class="header_buttons"></a>
@@ -73,7 +73,7 @@
     </nav>
 
       <!-- Quiz -->
-      <div id="container">
+      <section class="quiz_section">
         <h1>Initiation Quiz</h1>
         <div id="text">Text</div>
         <div id="option-buttons" class="btn-grid">
@@ -82,7 +82,7 @@
           <button class="btn">Option 3</button>
           <button class="btn">Option 4</button>
         </div>
-      </div>
+      </section>
 
       <!-- Footer -->
       <footer>
@@ -95,7 +95,7 @@
     <script>
       // quiz fades in
       window.setInterval(function() {
-        document.getElementById("container").style.opacity = "1";
+        document.getElementsByClassName("quiz_section")[0].style.opacity = "1";
       }, 50);
     </script>
     <script src="scripts/toggle_lighting_mode.js"></script>

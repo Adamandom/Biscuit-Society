@@ -72,7 +72,7 @@ header {
 }
 
 /* the header graphic */
-#header_Main {
+.header_Main {
     position: relative;
     z-index: 1;
     height: 20em;
@@ -188,13 +188,12 @@ section {
 }
 
 .intro_subheading {
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .intro_graphic {
     display: grid;
-    margin: 2em auto 0;
-    padding: 2em 0;
+    margin: 0 auto;
     width: 100%;
     height: 20em;
 }

@@ -1,93 +1,138 @@
 var counter = 0; // keeps track of number of clicks
 var counterElement = document.getElementById("counter");
+var currentPower = () => 1;
+var currentCookie = () => 0;
+
+var upgradesRadio = 0;
+var cookieRadio = 1;
+var upgradeIndex = 0;
+
+var currentBiscuit = document.getElementById("currentBiscuit");
+var contentPath = "Content/Biscuit Bash/Cookies/";
 
 // list of upgrades
+// type: true = upgrade ; false = cookie
 const upgrades = [
     {
         name: "Double Click",
-        type: "upgrade",
-        code: function() {return multiClick(2)},
+        func: function() {return multiClick(2)},
+        type: true,
         unlocked: false,
-        requirement: 10
+    },
+    {
+        name: "Quad Click",
+        func: function() {return multiClick(4)},
+        type: true,
+        unlocked: false,
+    },
+    {
+        name: "A Nibble To The Past",
+        image: contentPath + "NibbleZelda.svg",
+        func: function() {
+            let total = 0;
+            for (i=0; i<8; i++) {
+                if (randint(100) > 90) {
+                    total++;
+                }
+            }
+            return total * 8;
+        },
+        type: false,
+        unlocked: false,
+    },
+    {
+        name: "Oct Click",
+        func: function() {return multiClick(8)},
+        type: true,
+        unlocked: false,
+    },
+];
+
+// reference to cookie upgrades go in here
+var availableCookies = [
+    {
+        name: "Default Andy",
+        image: contentPath + "defaultAndy.svg",
+        func: function() {
+            return 1;
+            // code block
+        },
+        type: false,
+        unlocked: true,
+    }
+    ];
+// reference to upgrades upgrades go in here
+var availableUpgrades = [];
+
+const unlocks = [
+    {
+        name: "Double Click",
+        requirement: 5,
     },
 
     {
         name: "Quad Click",
-        type: "upgrade",
-        code: function() {return multiClick(4)},
-        unlocked: false,
-        requirement: 75
+        requirement: 10,
     },
 
     {
-        name: "Oct Click",
-        type: "upgrade",
-        code: function() {return multiClick(8)},
-        unlocked: false,
-        requirement: 100
+        name: "A Nibble To The Past",
+        requirement: 20,
     },
-
-
+    {
+        name: "Oct Click",
+        requirement: 50,
+    },
 ];
 
 function upgradeChange(radio) {   
-    for (i=0; i<upgrades.length; i++) {
-        if (i == radio.value) {
-            upgrades[i].active = true;
-            activePower = i;
-        }
-        else {
-            upgrades[i].active = false;
-        }
+    if (radio.name === "upgrade") {
+        currentPower = upgrades[Number(radio.alt)].func;
     }
 }
 
+
 // entry point
-function clickedCookie(cookie) {
-    if (typeof activePower === "number") {
-        counter += upgrades[activePower].code();
-    }
-    else {
-        counter++;
-    }
-    counterElement.value = String(counter);
+function clickedCookie() {
+    counter += currentPower() + currentCookie();
+    counterElement.value = counter;
     checkUnlocks();
 }
 
 
+
 // checks list of unlocks
 function checkUnlocks() {
-    for (i=0; i<upgrades.length; i++) {
-        if (counter >= upgrades[i].requirement && !upgrades[i].unlocked) {
-            upgrades[i].unlocked = true;
-            alert("you unlocked " + upgrades[i].name + "!!"); 
-            activatePower(i);
-        }
+    if (counter >= unlocks[0].requirement) {
+        upgrades[upgradeIndex].unlocked = true;
+        alert("you unlocked " + unlocks[0].name + "!!"); 
+        activatePower();
+        unlocks.shift();           
+    }
+}
+
+
+
+// allows selection of power in side panel
+function activatePower() {
+    if (upgrades[upgradeIndex].type) {
+        var radio = document.getElementsByName("upgrade")[upgradesRadio];
+        availableUpgrades.push(upgrades[upgradeIndex]);
+        upgradesRadio++;
+    }
+    else {
+        var radio = document.getElementsByName("cookie")[cookieRadio];
+        availableCookies.push(upgrades[upgradeIndex]);
+        cookieRadio++;
     }  
 
-    for (i=0; i<cookies.length; i++) {
-        if (counter >= cookies[i].requirement && !cookies[i].unlocked) {
-            cookies[i].unlocked = true;
-            alert("you unlocked " + cookies[i].name + "!!"); 
-            activateCookie(i);
-        }
-    }  
-}
-
-
-// allows selection of power in side power
-function activatePower(number) {
-    let radio = document.getElementsByName("upgrade")[number];
     radio.disabled = false;
-    radio.previousElementSibling.innerText = upgrades[number].name;
+    radio.previousElementSibling.innerText = upgrades[upgradeIndex].name;
+    upgradeIndex++; 
 }
 
-function activateCookie(number) {
-    let radio = document.getElementsByName("cookie")[number];
-    radio.disabled = false;
-    radio.previousElementSibling.innerText = cookies[number].name;
-}
-
+// returns a pseudo random in. Max parameter affects the max range and therefore likelihood of
+// successful outcome
 function randint(max) {
     return Math.floor(Math.random() * max);
 }
@@ -101,59 +146,11 @@ function multiClick(multiplier) {
     }
 }
 
-
-var currentBiscuit = document.getElementById("currentBiscuit")
-var contentPath = "Content/Biscuit Bash/Cookies/";
-const cookies = [
-    {
-        name: "Default Andy",
-        image: contentPath + "defaultAndy.svg",
-        code: function() {
-            return 1;
-            // code block
-        },
-        unlocked: true,
-        requirement: 0,
-    },
-    {
-        name: "A Nibble to the Past",
-        image: contentPath + "NibbleZelda.svg",
-        code: function() {
-            return 1;
-            // code block
-        },
-        unlocked: false,
-        requirement: 20,
-    },
-];
-
 function cookieChange(biscuitChoice) {
-    currentBiscuit.src = cookies[biscuitChoice.value].image;
+    currentCookie = availableCookies[Number(biscuitChoice.id)].func;
+    document.getElementById("currentBiscuit").src = availableCookies[Number(biscuitChoice.id)].image;
 }
 
-function loadGame() {
-    
-}
-
-function saveGame() {
-    let data = [
-        counter
-    ];
-
-    // GOT TO HERE
-    
-    var saveData = new Blob(data, {type: "text/plain;charset=utf-8"});
-
-    let fileName = "BiscuitBash-SaveData.txt";
-
-    var a = document.createElement("a");
-    document.body.appendChild(a);
-    a.style = "display: none";
-    
-    var downloadURL = window.URL.createObjectURL(saveData);
-    a.href = downloadURL;
-    a.download = fileName;
-    a.click();
-    window.URL.revokeObjectURL(url);
-    
+function upgradeChange(upgradeChoice) { 
+    currentPower = availableUpgrades[Number(upgradeChoice.id)].func;
 }
