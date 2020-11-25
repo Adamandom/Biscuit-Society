@@ -1,0 +1,70 @@
+/* style for the contact page */
+
+iframe {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transition: 500ms;
+}
+
+iframe:hover {
+    opacity: 1;
+}
+
+.contact_map {
+    margin: 0 auto 8em;
+    display: grid;
+    height: 30em;
+    border-radius: var(--rounding-div);
+    overflow: hidden;
+    background: var(--color-dark);
+    border: var(--border-05);
+    border-width: 1em;
+    
+}
+
+.contact_list_container {
+    margin: 0 auto;
+    display: grid;
+    width: 80%;
+}
+
+
+.contact_section ol {
+    display: inline;
+    margin: 0 auto;
+    width: 100em;
+}
+
+.contact_section li {
+    list-style-type: none;
+    width: 40%;
+    float: left;
+}
+
+.contact_section p {
+    max-width: 80%;
+}
+
+.contact_media_container {
+    width: 90%;
+    display: grid;
+    margin: 2em auto 8em;
+    height: 30em;
+    background: var(--color-dark);
+    border-radius: var(--rounding-div);
+}
+
+.contact_media {
+    border: var(--border-05);
+    border-width: 1em;
+    overflow: auto;
+    border-radius: var(--rounding-div)
+    
+}
+
+.contact_media::-webkit-scrollbar {
+    display: none;
+}

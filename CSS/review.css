@@ -1,0 +1,152 @@
+/* 
+Review Page Stylesheet
+
+This page contains styles specific to the review page
+ - Adam
+*/
+
+/* REVIEW - contains review heads and bodies */
+
+
+.review_Div {
+    position: relative;
+    display: grid;
+    height: 40em;
+    width: 90%;
+    margin: 0 auto 4em;
+}
+
+/* REVIEW HEAD - contains title, subtitle, author, score and image */
+.review_head {
+    position: absolute;
+    border: var(--color-dark) solid 0.5em;
+    box-shadow: #2c090777 1.25em 0 0.5em;
+    z-index: 1;
+    display: grid;
+    height: inherit;
+    width: 30em;
+    background: var(--color-mid);
+    border-radius: var(--rounding-div);
+    transition: 500ms;
+}
+
+.review_head h1 {
+    font-size: 4em;
+}
+
+.review_head p {
+    max-width: 100%;
+    font-size: 2em;
+    margin: 0 auto;
+    max-height: 3em;
+}
+
+.review_head img {
+    max-width: 20em;
+    max-height: 15em;
+    overflow: hidden;
+    display: grid;
+    margin: 0 auto;
+    border: 0.5em solid var(--color-dark);
+    border-radius: var(--rounding-div);
+}
+
+.score_container {
+    position: relative;
+    display: grid;
+    font-family: grandstander;
+    background: var(--color-dark);
+    height: 4em;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5em;
+}
+
+.score_text {
+    padding: 0.5em;
+    font-family: var(--font-title);
+    margin: auto;
+    color: var(--color-mid);
+}
+
+.score_bar {
+    position: inherit;
+    display: grid;
+    height: 60%;
+    margin: 0.8em 5% 0;
+    border-radius: var(--rounding-section);
+    /* needs to start at these values for animation */
+    background: red;
+    width: 0;
+    transition: 500ms;
+}
+
+.review_Body {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    height: 60%;
+    width: 60em;
+    margin: auto 0;
+    background: var(--color-dark);
+    border-radius: var(--rounding-div);
+    overflow: hidden;
+    border: var(--color-mid) solid 0.5em;
+    left: 32%;
+
+    transition: 500ms;
+}
+
+.review_Body p {
+    position: inherit;
+    right: 0;
+    padding: 1rem 1em;
+    color: var(--color-mid);
+    text-align: left;
+    max-width: 100%;
+    font-size: 2em;
+}
+
+/*
+ALTERNATE REVIEW DIVS
+    every second review will have inverted colors and the head will appear on the right,
+    not the left.
+
+
+*/
+
+[alt=altReview] .review_head {
+    border-color: var(--color-mid);
+    right: 0;
+    box-shadow:#2c090777 -1.25em 0 0.5em;
+    background-color: var(--color-dark);
+}
+
+[alt=altReview] h1,
+[alt=altReview] p {
+    color: var(--color-mid);
+}
+
+[alt="altReview"] .score_container {
+    background-color: var(--color-mid);
+}
+
+[alt="altReview"] .score_text {
+    color: var(--color-dark);
+}
+
+[alt=altReview] .review_Body {
+    border-color: var(--color-dark);
+    background-color: var(--color-mid);
+    text-align: right;
+    left: 0;
+}
+
+[alt=altReview] .review_Body p {
+    color: var(--color-dark);
+    left: 0;
+}
+
+[alt="altReview"] img {
+    border-color: var(--color-mid);
+}

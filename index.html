@@ -7,8 +7,8 @@
         <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg"/>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="Style Sheets/const-style.css">
-        <link rel="stylesheet" href="Style Sheets/home-style.css">
+        <link rel="stylesheet" href="CSS/const.css">
+        <link rel="stylesheet" href="CSS/index.css">
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Grandstander" rel="stylesheet" >
@@ -17,19 +17,20 @@
         <!-- Meta Data -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
 
     <body>
         <!-- Header -->
         <header>
-            <img src="Content/Vector Graphics/Header.svg" alt="Header" id="header_Main">
+            <img src="Content/Vectors/Header/Header.svg" alt="Header" id="header_image">
 
-            <a href="https://www.instagram.com/robertgordonuni/"><img src="Content/Vector Graphics/SocialIcon3.svg"
+            <a href="https://www.rgu.ac.uk/"><img src="Content/Vectors/Misc/RGU Icon.svg"
                     alt="RGU" style="left: 67em" class="header_buttons"></a>
-            <img onclick="toggleContrastMode()" src="Content/Vector Graphics/contrastOff.svg" alt="contrastModeToggle" style="left: 77em"
+            <img src="Content/Vectors/Misc/Off/contrast.svg" alt="high contrast toggle" style="left: 77em"
                     class="header_buttons" id="contrastModeButton">
 
-            <img onclick="toggleDarkMode()" src="Content/Vector Graphics/darkOff.svg" alt="darkModeToggle" style="left: 87em"
+            <img src="Content/Vectors/Misc/Off/dark.svg" alt="dark mode toggle" style="left: 87em"
                     class="header_buttons" id="darkModeButton">
         </header>
 
@@ -37,35 +38,35 @@
         <nav>
             <ul>
                 <li style="left: 0">
-                    <a href="contact-html.html"><img src="Content/Vector Graphics/contact_Tab.svg" alt="CONTACT_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="contact.html"><img src="Content/Vectors/Nav/contact.svg" alt="contact page"
+                            class="nav_tab"></a>
                 </li>
                 <li style="left: 16.7%">
-                    <a href="gallery-html.html"><img src="Content/Vector Graphics/gallery_Tab.svg" alt="GALLERY_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="gallery.html"><img src="Content/Vectors/Nav/gallery.svg" alt="gallery page"
+                            class="nav_tab"></a>
                 </li>
                 <li style="left: 33.4%">
-                    <a href="review-html.html"><img src="Content/Vector Graphics/review_Tab.svg" alt="REVIEW_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="review.html"><img src="Content/Vectors/Nav/review.svg" alt="review page"
+                            class="nav_tab"></a>
                 </li>
 
                 <!-- home tab will be inverted colors + bigger + slightly lower down -->
                 <li>
-                    <a href="index.html"><img src="Content/Vector Graphics/Home_Tab.svg" alt="HOME_PAGE"
-                            class="nav_HomeTab"></a>
+                    <a href="index.html"><img src="Content/Vectors/Nav/home.svg" alt="home page"
+                            class="nav_hometab"></a>
                 </li>
 
                 <li style="right: 33.4%">
-                    <a href="game-html.html"><img src="Content/Vector Graphics/game_Tab.svg" alt="GAME_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="game.html"><img src="Content/Vectors/Nav/game.svg" alt="game page"
+                            class="nav_tab"></a>
                 </li>
                 <li style="right: 16.7%">
-                    <a href="quiz-html.html"><img src="Content/Vector Graphics/quiz_Tab.svg" alt="QUIZ_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="quiz.html"><img src="Content/Vectors/Nav/quiz.svg" alt="quiz page"
+                            class="nav_tab"></a>
                 </li>
                 <li style="right: 0">
-                    <a href="recipes-html.html"><img src="Content/Vector Graphics/recipes_Tab.svg" alt="RECIPE_PAGE"
-                            class="nav_Tab"></a>
+                    <a href="recipes.html"><img src="Content/Vectors/Nav/recipe.svg" alt="recipe page"
+                            class="nav_tab"></a>
                 </li>
             </ul>
         </nav>
@@ -84,7 +85,7 @@
                         Check out some of our society's achievements!
                     </p>
                     <img src="Content/Vector Graphics/Gallery_Biscuit.svg" alt="Gallery" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                     
                 </li>
                 <li style="left: 2.5em">
@@ -93,14 +94,14 @@
                         Test your mettle against a gauntlet of tricky questions!
                     </p>
                     <img src="Content/Vector Graphics/Quiz_Biscuit.svg" alt="Quiz" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                 </li>
             </ul>
             <ul alt="altDiv">
                 <li style="right: 2.5em" >
                     <h1 class="section_title">Reviews</h1>
                     <img src="Content/Vector Graphics/Reviews_Biscuit.svg" alt="Reviews" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                     <p class="section_text">
                         See our members thoughts on biscuits by reading their reviews!
                     </p>
@@ -109,7 +110,7 @@
                 <li style="left: 2.5em">
                     <h1 class="section_title">Biscuit Bash</h1>
                     <img src="Content/Vector Graphics/Game_Biscuit.svg" alt="Game" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                     <p class="section_text">
                         Kill some time in our Cookie Clicker inspired game, Biscuit Bash!
                     </p>
@@ -123,7 +124,7 @@
                         Send us your thoughts and get into contact with us here!
                     </p>
                     <img src="Content/Vector Graphics/Contact_Biscuit.svg" alt="Contact" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                 </li>
                 <li style="left: 2.5em">
                     <h1 class="section_title">Recipes</h1>
@@ -131,7 +132,7 @@
                         Bake your own biscuits with these home recipes from our society!
                     </p>
                     <img src="Content/Vector Graphics/Recipes_Biscuit.svg" alt="Recipes" class="section_icon"
-                        onclick="biscuitBite(this)">
+                        onclick="Bite.goToPage(this)">
                     
                 </li>
             </ul>

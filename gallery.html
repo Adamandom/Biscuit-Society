@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Titles and Icons-->
+    <title>Gallery</title>
+    <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg"/>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="CSS/const.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/used-bootstrap.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
+    
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <img src="Content/Vectors/Header/Header.svg" alt="Header" id="header_image">
+
+      <a href="https://www.rgu.ac.uk/"><img src="Content/Vectors/Misc/RGU Icon.svg" alt="RGU" style="left: 67em"
+              class="header_buttons"></a>
+      <img src="Content/Vectors/Misc/Off/contrast.svg" alt="high contrast toggle" style="left: 77em"
+          class="header_buttons" id="contrastModeButton">
+
+      <img src="Content/Vectors/Misc/Off/dark.svg" alt="dark mode toggle" style="left: 87em" class="header_buttons"
+          id="darkModeButton">
+  </header>
+
+  <!-- Nav -->
+  <nav>
+      <ul>
+          <li style="left: 0">
+              <a href="contact.html"><img src="Content/Vectors/Nav/contact.svg" alt="contact page"
+                      class="nav_tab"></a>
+          </li>
+          <li style="left: 16.7%">
+              <a href="gallery.html"><img src="Content/Vectors/Nav/gallery.svg" alt="gallery page"
+                      class="nav_tab"></a>
+          </li>
+          <li style="left: 33.4%">
+              <a href="review.html"><img src="Content/Vectors/Nav/review.svg" alt="review page" class="nav_tab"></a>
+          </li>
+
+          <!-- home tab will be inverted colors + bigger + slightly lower down -->
+          <li>
+              <a href="index.html"><img src="Content/Vectors/Nav/home.svg" alt="home page" class="nav_hometab"></a>
+          </li>
+
+          <li style="right: 33.4%">
+              <a href="game.html"><img src="Content/Vectors/Nav/game.svg" alt="game page" class="nav_tab"></a>
+          </li>
+          <li style="right: 16.7%">
+              <a href="quiz.html"><img src="Content/Vectors/Nav/quiz.svg" alt="quiz page" class="nav_tab"></a>
+          </li>
+          <li style="right: 0">
+              <a href="recipes.html"><img src="Content/Vectors/Nav/recipe.svg" alt="recipe page" class="nav_tab"></a>
+          </li>
+      </ul>
+  </nav>
+
+      <!-- Caroussel -->
+    <section class="gallery_index">
+      <h1>Here are some links to get you started!</h1>
+
+      <section class="caro_section">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+          </ul>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="caro_img_container">
+                <img src="Content/Raster Images/Bourbon Biscuit.jpg" class="car_img"/>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <p>by Adam (age 27)</p>
+                <h1>A Masterpiece</h1>
+              </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="caro_img_container">
+                <img src="Content/Raster Images/digestives.jpg"/>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <p>BS nominated for epic prize</p>
+                <h1>Cookie Victory</h1>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+
+            <img src="Content/Raster Images/coffee-and-biscuits.jpg" class="car_img"/>
+
+              <div class="carousel-caption d-none d-md-block">
+                <p>surge in new members for BS</p>
+                <h1 class="caro_title_main">Cool Growth</h1>
+              </div>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+
+        </div>
+      </div>
+  </section>
+
+      <ol>
+        <li>
+          <p>Our participation at the <span>Biscuit Olympics</span>!</p>
+        </li>
+        <li>
+          <p>The time we made a <span>robot (name of razorblade biscuit)</span>!</p>
+        </li>
+        <li>
+          <p>Coming first place in a <span>Biscuit Spelling Bee</span>!</p>
+        </li>
+        <li>
+          <p>Raising over £9,000 for <span> Crumble Relief </span>!</p>
+        </li>
+      </ol>
+    </section>
+
+  <section class="gallery_section">
+      <div class="gallery_div" id="gallery_div1">
+          <h1>Biscuit Olympics!</h1>
+          <img src="Content/Raster Images/chocolate chip cookies.jpg" alt="Gingerbread men"> 
+          
+          <div class="gallery_text_div">
+            <p>It was a hard day, but in the end</p>
+          </div>
+           
+          <div class="gallery_text_div">
+              <p class="gallery_desc">
+                  wd
+              </p>
+          </div>
+      </div>
+  </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <p class="footer_text">
+          The Biscuit Society website was made by Harry Kellock, <span>Robert Tunn</span> and Adam Sutherland
+      </p>
+    </footer>
+
+    <!-- to top button -->
+    <button id="returnToTop" onclick="GoTo.scrollTo(0)">
+      To Top
+    </button>
+
+  <script src="Scripts/Lighting Mode.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="Scripts/popper.min.js"></script>
+  <script src="Scripts/bootstrap-4.4.1.js"></script>
+    <script src="Scripts/Scroll To.js"></script>
+</body>
+</html>

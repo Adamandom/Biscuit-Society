@@ -7,7 +7,7 @@ const noises = [
 
 var Bite = { 
     id: function(clicked) { return clicked.alt; },
-    image: "Content/Vector Graphics/Home/" + this.id + "_BiscuitALT.svg",
+    image: this.id + "_BiscuitALT.svg",
     link: this.id + "-html.html",
     goToPage: function() {
         window.setInterval(function() {

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Tab Title and Favicon -->
+    <title>Reviews</title>
+    <link rel="icon" type="image/svg" href="Content/Favicon/Favicon.svg"/>
+
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="CSS/const.css">
+    <link rel="stylesheet" href="CSS/review.css">
+    <link rel="stylesheet" href="CSS/form.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+ 
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- Modal Menu shown after Submitting review -->
+<div id="modal_container">
+    <div id="modal_content">
+        <h1>Thank you for your review!</h1>
+        <p>Click anywhere to close</p>
+    </div>
+</div>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="Content/Vectors/Header/Header.svg" alt="Header" id="header_image">
+
+        <a href="https://www.rgu.ac.uk/"><img src="Content/Vectors/Misc/RGU Icon.svg"
+                alt="RGU" style="left: 67em" class="header_buttons"></a>
+        <img src="Content/Vectors/Misc/Off/contrast.svg" alt="high contrast toggle" style="left: 77em"
+                class="header_buttons" id="contrastModeButton">
+
+        <img src="Content/Vectors/Misc/Off/dark.svg" alt="dark mode toggle" style="left: 87em"
+                class="header_buttons" id="darkModeButton">
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li style="left: 0">
+                <a href="contact.html"><img src="Content/Vectors/Nav/contact.svg" alt="contact page"
+                        class="nav_tab"></a>
+            </li>
+            <li style="left: 16.7%">
+                <a href="gallery.html"><img src="Content/Vectors/Nav/gallery.svg" alt="gallery page"
+                        class="nav_tab"></a>
+            </li>
+            <li style="left: 33.4%">
+                <a href="review.html"><img src="Content/Vectors/Nav/review.svg" alt="review page"
+                        class="nav_tab"></a>
+            </li>
+
+            <!-- home tab will be inverted colors + bigger + slightly lower down -->
+            <li>
+                <a href="index.html"><img src="Content/Vectors/Nav/home.svg" alt="home page"
+                        class="nav_hometab"></a>
+            </li>
+
+            <li style="right: 33.4%">
+                <a href="game.html"><img src="Content/Vectors/Nav/game.svg" alt="game page"
+                        class="nav_tab"></a>
+            </li>
+            <li style="right: 16.7%">
+                <a href="quiz.html"><img src="Content/Vectors/Nav/quiz.svg" alt="quiz page"
+                        class="nav_tab"></a>
+            </li>
+            <li style="right: 0">
+                <a href="recipes.html"><img src="Content/Vectors/Nav/recipe.svg" alt="recipe page"
+                        class="nav_tab"></a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Intro -->
+    <section class="intro_section">
+        <img src="Content/Vectors/Intro Graphics/review.svg" class="intro_graphic" alt="intro graphic">
+        <p class="intro_subheading">
+            Read some reviews from the society or<br><span onclick="GoTo.scrollTo('form_section')">write your own</span>!
+        </p>
+    </section>
+
+    <!-- Review Section -->
+    <section>
+
+        <h1 class="section_heading">Biscuit Reviews</h1>
+
+        <div class="review_Div">
+            <!-- headline contains image, author, title and subtitle-->
+            <div class="review_head">
+                <h1>The Ol' Bourbon</h1>
+                <p><i>"My own special cure-all"</i></p>
+                <img src="Content/Raster/Bourbon Biscuit.jpg" alt="Biscuit Picture">
+                <p><i>by</i> Sharon Wainwright</p>
+                <div class="score_container" onmouseover="scoreBar(this)" title="4">
+                    <p class="score_text">SCORE</p>
+                </div>
+            </div>
+            <!-- body contains text, score bars-->
+            <div class="review_Body">
+                <p>
+                    When you get to be my age, there's nothing but blistering headaches from your kids
+                    screaming about their counter strikes and their mining and crafting. The 
+                    cure to your manic migraine? No it isn't Paracetamol, it's a good bourbon!
+                    <br><br>
+                    These bad boys pack a mean punch with a brilliant brown color and a hearty tang,
+                    there truly is no better drink. Just make sure the kids can't get to it.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="review_Div" alt="altReview">
+            <!-- headline contains image, author, title and subtitle-->
+            <div class="review_head">
+                <h1>stick 2 bred lmao</h1>
+                <p><i>"get it like hovis bred lol"</i></p>
+                <img src="Content/Raster/coffee-and-biscuits.jpg" alt="Biscuit Picture">
+                <p><i>by</i> xxx_darkslayer1134_xxx</p>
+
+                <div class="score_container" onmouseover="scoreBar(this)" title="1">
+                    <p class="score_text">SCORE</p>
+                </div>
+
+            </div>
+            <!-- body contains text, score bars-->
+            <div class="review_Body">
+                <p>
+                    so like i was at tesco lookin for limp bizkit albusm (they r like the best band i heard about them frm jojo lol)
+                    and so i see the bizkit ile and go in and see hovis i think that is the main singer xd but imagine my
+                    shock when i see its BISKITS. no z, no coolness.
+                    <br><br>
+                    they taste like pure gads min. Not exactly soothing to a pallete as refined as mine, I rate These
+                    1/5. The lowest I can possibly. (couldnt get pic i ate them lol) 
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Form Section -->
+    <section id="form_section">
+        <h1 class="section_heading">Leave your own review!</h1>
+        <p>Tell us what you think of a biscuit for a chance to be featured on the page!</p>
+
+        <form action="javascript: showModal()">
+            <input type="text" name="rTitle" id="reviewTitle" class="textInput" placeholder="Title..."
+                autocomplete="off" required>
+            <br><br>
+
+            <input type="text" name="rSubHead" id="reviewSubheading" class="textInput" placeholder="Subheading..."
+                autocomplete="off" required>
+            <br><br>
+
+            <input type="text" name="rAuthor" id="reviewAuthor" class="textInput" placeholder="Your name..."
+                autocomplete="off" required>
+            <br><br>
+
+            <textarea name="rReview" id="reviewReview"
+                placeholder="Write your review (please keep it less than 500 characters)..." autocomplete="off"
+                maxlength="500" required></textarea>
+            <br><br><br><br>
+
+            <label name="rScore" for="reviewScore">Give your score </label>
+            <div id="review_slider">
+                <input type="range" id="reviewScore" min=1 max=120 step=1 value=4 onchange="sliderColor(this)" required>
+            </div>
+            <br>
+            <p id="currentScore">1/5</p>
+            <br>
+            <div id="reviewImage_container">
+                <p>Upload image of Biscuit Reviewed</p>
+                <input type="file" id="reviewImage" accept=".png, .jpg, .jpeg" required>
+            </div>
+            <br>
+
+            <p id="uploadedFile">No file has been selected</p>
+            <br><br><br>
+
+            <input type="submit" value="POST!" id="formSubmit">
+
+            <br><br><br>
+        </form>
+    </section>
+
+    <!-- return to top button -->
+    <button id="returnToTop" onclick="GoTo.scrollTo(0)">
+        To Top
+    </button>
+
+    <!-- Footer - this is consistent across the entire site barring the <span> which will change depending on author -->
+    <footer>
+        <p class="footer_text">
+            The Biscuit Society website was made by Harry Kellock, Robert Tunn and <span class="footer_author">Adam
+                Sutherland</span>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="Scripts/Lighting Mode.js"></script>
+    <script src="Scripts/File Name.js"></script>
+    <script src="scripts/Score Bars.js"></script>
+    <script src="scripts/Show Modal.js"></script>
+    <script src="scripts/Scroll To.js"></script>
+
+</body>
+
+</html>

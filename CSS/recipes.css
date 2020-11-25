@@ -1,0 +1,108 @@
+/*
+Recipe Style Sheet
+
+This page contains styles for the recipe page.
+ - Adam
+*/
+
+
+.recipe_section h1 {
+    margin-bottom: 0.5em;
+}
+
+/* contains two reviews that are recipe  */
+.recipe_container {
+    display: inline;
+    margin: 0 auto 6em;
+    width: 80%;
+}
+
+/* contains all review content for a recipe */
+.recipe_div {
+    position: relative;
+    float: left;
+    background: var(--color-div);
+    width: 30em;
+    padding: 3em;
+    text-align: center;
+    border-radius: var(--rounding-section);
+    border: var(--border-05);
+}
+
+.recipe_div img {
+    margin: 0 auto;
+    width: 26em;
+    height: 18em;
+    border-radius: var(--rounding-div);
+    background: var(--color-dark);
+    border: var(--border-05);
+}
+
+.recipe_div h1 {
+    height: 3em;
+    font-size: 4em;
+    color: var(--color-section);
+    margin: -0.5em auto 0.5em;
+}
+
+.recipe_section h2 {
+    padding: 0.5em 0 0.25em;
+    transition: 500ms;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.recipe_section h2:hover {
+    color: var(--color-div);
+}
+
+.recipe_div h3 {
+    margin-bottom: 0.5em;
+    font-weight: var(--weight-mid);
+    font-size: 2.5em;
+    color: var(--color-section);
+}
+
+/* container for text (for ingredients and method) */
+.recipe_text_div {
+    width: 90%;
+    background-color: var(--color-section);
+    border: var(--border-05);
+    margin: 0 auto 4em;
+    border-radius: var(--rounding-div);
+}
+
+.recipe_section ul {
+    display: none;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+}
+
+.recipe_div p {
+    display: none;
+    max-width: 90%;
+    font-size: 1em;
+}
+
+.recipe_div li,
+.recipe_div p {
+    margin: 0 auto;
+    padding: 0.25em 0;
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    font-size: 2em;
+}
+
+/* only used for ingredient links */
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: var(--weight-bold);
+    transition: 300ms;
+}
+
+a:hover {
+    color: var(--color-div);
+}
