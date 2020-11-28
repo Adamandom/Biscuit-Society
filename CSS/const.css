@@ -345,3 +345,31 @@ span {
     padding-top: 1em;
     color: var(--color-dark);
 }
+
+/* Music Button - used on Quiz and Game pages */
+
+#music_button {
+    width: 9em;
+    height: 9em;
+    padding: 3em;
+    transition: 300ms;
+}
+
+#music_button[alt="quiz music toggle"] {
+    margin-left: 85%;
+    display: grid;
+
+}
+
+#music_button[alt="game music toggle"] {
+    position: absolute;
+    top: 0%;
+    left: 77.5%;
+    margin: 0;
+}
+
+#music_button:hover,
+.side_panel img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}

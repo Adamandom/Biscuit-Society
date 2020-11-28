@@ -6,6 +6,11 @@ const optionButtonsElement = document.getElementById('option-buttons');
 
 let state = {};
 
+// sounds for right/wrong answers or confirmation;
+var correct = document.getElementById("correct");
+var wrong = document.getElementById("wrong");
+var confirm = document.getElementById("confirm");
+
 function startGame() {
   state = {};
   showTextNode(1);
@@ -39,9 +44,32 @@ function selectOption(option) {
     return startGame();
   }
   state = Object.assign(state, option.setState);
+
+  playSound(nextTextNodeId);
   showTextNode(nextTextNodeId);
 }
 
+// a function to play an appropriate sound selection of an option
+function playSound(ans) {
+  let sound = "Content/Sounds/";
+  switch (ans) {
+    case 1:
+    case 3:
+      sound += "confirm.mp3";
+      break;
+    case 2:
+    case 9:
+      sound += "wrong.mp3";
+      break;
+    default:
+      sound += "correct.mp3";
+      break;
+  }
+  let sfx = document.getElementById("soundEffect");
+  sfx.src = sound;
+  sfx.play();
+
+}
 
 
 const textNodes = [

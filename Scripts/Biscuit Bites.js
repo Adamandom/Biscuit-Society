@@ -5,14 +5,21 @@ const noises = [
     "bite_Ter.mp3",
 ];
 
-var Bite = { 
-    id: function(clicked) { return clicked.alt; },
-    image: this.id + "_BiscuitALT.svg",
-    link: this.id + "-html.html",
-    goToPage: function() {
-        window.setInterval(function() {
-            window.location.href = this.link;
-        }, 700)   
-    },
+function bite(clicked) {
+    let identifier = clicked.alt;
+    let link = identifier + ".html";
+    clicked.src = "Content/Vectors/Biscuits/Off/" + identifier + ".svg";
+    playSound();
+    clicked.style.transform = "scale(1)";
+    window.setInterval(function() {
+        location.href = identifier + ".html";
+    }, 700)
+    
+}
 
+function playSound() {
+    let audio = document.getElementsByTagName("audio")[0];
+    // randomly selects a soundclip from the noises array
+    audio.src = "Content/Sounds/" + noises[Math.floor(Math.random() * noises.length)];
+    audio.play();
 }

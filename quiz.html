@@ -71,9 +71,18 @@
     </ul>
 </nav>
 
+      <section class="intro_section">
+        <h1><i>Welcome to the...</i></h1>
+        <img src="Content/Vectors/Intro Graphics/quiz.svg" alt="" class="intro_graphic">
+        
+      </section>
+
       <!-- Quiz -->
       <section class="quiz_section">
-        <h1>Initiation Quiz</h1>
+        <img onclick="Music.toggle(this)" src="Content/Vectors/Misc/Off/music.svg" alt="quiz music toggle"
+        id="music_button">
+      
+
         <div id="text">Text</div>
         <div id="option-buttons" class="btn-grid">
           <button class="btn">Option 1</button>
@@ -83,6 +92,8 @@
         </div>
       </section>
 
+      
+
       <!-- Footer -->
       <footer>
         <p class="footer_text">
@@ -90,8 +101,14 @@
         </p>
     </footer>
 
+    <!-- Audio (For... soundtrack correct and wrong sounds respectively) -->
+    <audio id="music" src="Content/Sounds/A Menacing Bash.mp3" loop></audio>
+    <audio id="soundEffect" src=""></audio>
+
+
     <!-- Scripts -->
     <script src="Scripts/Lighting Mode.js"></script>
     <script src="Scripts/Quiz Script.js"></script>
+    <script src="Scripts/Toggle Music.js"></script>
   </body>
 </html>

@@ -35,22 +35,30 @@
 
 .quiz_section {
   color: var(--color-dark);
+  position: relative;
+  min-height: 50em;
+}
+
+
+.intro_section h1 {
+  margin-bottom: none;
+  font-size: 5em;
 }
 
 #text {
   font-family: var(--font-body);
   font-weight: var(--weight-mid);
   font-size: 2.5em;
-  margin: 0.5em auto 0;
+  margin: 0 auto 2rem;
   text-align: center;
-  width: 80%;
+  width: 85%;
 }
 
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(1, auto);
-  gap: 3em;
-  margin: 1em 0 4em;
+  gap: 1.5em;
+  margin: 1em 0 5em;
 }
 
 .btn {
@@ -66,7 +74,7 @@
   font-weight: var(--weight-mid);
   font-size: 2em;
   cursor: pointer;
-  width: 80%;
+  width: 90%;
 
   transition: 300ms;
 }

@@ -6,6 +6,7 @@ document.body.appendChild( document.createElement("style") );
 // Content path for images
 const lightModeContentPath = "Content/Vectors/Misc/";
 
+// color themes are stored as strings.
 const darkTheme = `
 :root {
     --color-section: #3dcb8c;
@@ -16,7 +17,7 @@ const darkTheme = `
     --color-bright: #3bff9e;
 
     --color-shadow: #00192377;
-    --color-hovered: #58011F;
+    --color-hovered: #cdff42;
     --color-submit: #B70057;
 
     --border-05: solid 0.5em #001923;
@@ -30,7 +31,8 @@ span {
     color: var(--color-hovered);
 }
 
-.nav_tab {
+.nav_tab,
+#music_button {
     filter: hue-rotate(130deg);
 }
 .nav_hometab {
@@ -96,14 +98,13 @@ header {
 }
 
 .nav_hometab,
-.game_section img,
 .header_buttons,
-.intro_section img {
+.intro_section img,
+.intro_graphic,
+#music_button {
     filter: saturate(0) contrast(5);
 }
-
-`
-
+`;
 
 // initialise bools
 if (typeof darkMode === "undefined") {

@@ -5,7 +5,7 @@ var Music = {
     on: "Content/Vectors/Misc/On/music.svg",
     off: "Content/Vectors/Misc/Off/music.svg",
     audio: document.getElementById("music"),
-    currentState: true, // true = on
+    currentState: false, // true = on
 
     toggle: function(musicIcon) {
         if (this.currentState) {
