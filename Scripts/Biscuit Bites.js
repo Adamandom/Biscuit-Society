@@ -6,7 +6,7 @@ const noises = [
 ];
 
 function bite(clicked) {
-    let identifier = clicked.alt;
+    let identifier = clicked.alt.toLowerCase();
     let link = identifier + ".html";
     clicked.src = "Content/Vectors/Biscuits/Off/" + identifier + ".svg";
     playSound();
