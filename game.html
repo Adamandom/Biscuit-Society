@@ -111,7 +111,7 @@
         <p id="timer"><span id="minutes" style="color: inherit">0</span>:<span id="seconds" style="color: inherit">00</span></p>
 
         <div class="side_panel" style="left: 15%">
-            <img src="Content/Raster/BiscuitBash/companion.png" alt="current biscuit" id="panelBiscuit" onclick="getModal()">
+            <img src="Content/Raster/BiscuitBash/companion.png" alt="current biscuit" id="panelBiscuit" onclick="getModal(this)">
             
             <label for="0">Companion Cookie</label>
                 <input type="radio" name="cookie" id="0" enable onclick="powerChange(this)" checked="checked"> 
@@ -128,7 +128,7 @@
         </div>
 
         <div class="side_panel" style="left: 85%">
-            <img src="Content/Raster/BiscuitBash/none.png" alt="current upgrade" id="panelUpgrade" onclick="getModal()">
+            <img src="Content/Raster/BiscuitBash/none.png" alt="current upgrade" id="panelUpgrade" onclick="getModal(this)">
             
             <label for="0">???</label>
                 <input type="radio" name="upgrade" id="0" disabled onclick="powerChange(this)"> 
