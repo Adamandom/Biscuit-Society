@@ -17,8 +17,8 @@ const darkTheme = `
     --color-bright: #3bff9e;
 
     --color-shadow: #00192377;
-    --color-hovered: #cdff42;
-    --color-submit: #B70057;
+    --color-hovered: #b7ff26;
+    --color-submit: #b70057;
 
     --border-05: solid 0.5em #001923;
 }
@@ -62,7 +62,7 @@ const contrastTheme =  `
     --color-span: red;
 
     --color-shadow: #000000DD;
-    --color-hovered: red;
+    --color-hovered: cyan;
     --color-submit: red;
 
     --rounding-section: 5em;

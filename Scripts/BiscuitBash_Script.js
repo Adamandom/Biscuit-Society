@@ -78,7 +78,7 @@ const upgrades = [
             return total * 8;
         },
         type: false,
-        desc: "It's a secret to everbody! Well okay... grants a chance to get upwards of x64 click!",
+        desc: "It's a secret to everbody! Well okay... grants a chance to get upwards of 64x click!",
     },
     {
         name: "Platinum Chip Cookie",
@@ -136,7 +136,7 @@ const upgrades = [
             else { return 16; }
         },
         type: false,
-        desc: "Big climb, big fall. Chance to activate either Cave Storeo or Platinum Chip Cookie. Otherwise, returns 16x modifier.",
+        desc: "Man alive! Her every ache a baton to me. Chance to activate either Cave Storeo or Platinum Chip Cookie. Otherwise, returns 16x modifier.",
     },
     {
         name: "Void Tart",
@@ -256,12 +256,13 @@ function nextUp() {
         if (counter >= 77777777) {
             clearInterval(Interval); // stops timer
             document.getElementById("timer").style.color = "var(--color-div)";
-            goal.src = contentPath + "Completed.svg";
+            counterElement.style.color = "var(--color-submit)";
             goal.style.filter = "none";
+            goal.previousElementSibling.innerText = "";
             goal.nextElementSibling.innerText = "COMPLETE!!!";
         }
         else {
-            goal.src = contentPath + "Completed.svg";
+            goal.src = contentPath + "complete.png";
             goal.nextElementSibling.innerText = "go for..." + (77777777 - counter);
         }
 
@@ -348,7 +349,13 @@ function clickedCookie() {
     let modifier = currentCookie.func() * currentPower.func(); 
     counter += modifier;
     if (counter < 0) {
-        counter = 0;
+        counterElement.style.color = "var(--color-div)";
+        if (counter < -1000) {
+            counter = -1000;
+        }
+    }
+    else {
+        counterElement.style.color = "var(--color-bright)";
     }
     counterElement.value = counter;
     
