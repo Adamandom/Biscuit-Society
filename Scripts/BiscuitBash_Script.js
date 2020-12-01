@@ -136,7 +136,7 @@ const upgrades = [
             else { return 16; }
         },
         type: false,
-        desc: "Man alive! Her every ache a baton to me. Chance to activate either Cave Storeo or Platinum Chip Cookie. Otherwise, returns 16x modifier.",
+        desc: "Man alive! Chance to activate either Cave Storeo or Platinum Chip Cookie. Otherwise, returns 16x modifier.",
     },
     {
         name: "Void Tart",
@@ -252,21 +252,21 @@ var randint = (max) => (Math.floor(Math.random() * max) > 100) ? false : true;
 // handles the "next up" section below counter
 function nextUp() {
     let goal = document.getElementById("nextUnlock");
+    // if all upgrades gotten
     if (unlocks.length === 0) {
+        // if the final goal has been reached
         if (counter >= 77777777) {
             clearInterval(Interval); // stops timer
             document.getElementById("timer").style.color = "var(--color-div)";
-            counterElement.style.color = "var(--color-submit)";
+            counterElement.style.color = "#4ee630";
             goal.style.filter = "none";
             goal.previousElementSibling.innerText = "";
             goal.nextElementSibling.innerText = "COMPLETE!!!";
         }
         else {
             goal.src = contentPath + "complete.png";
-            goal.nextElementSibling.innerText = "go for..." + (77777777 - counter);
+            goal.nextElementSibling.innerText = "in..." + (77777777 - counter);
         }
-
-        
     }
 
     else {
@@ -348,8 +348,10 @@ function clickedCookie() {
 
     let modifier = currentCookie.func() * currentPower.func(); 
     counter += modifier;
+    // change the color of the counter based on its value
     if (counter < 0) {
-        counterElement.style.color = "var(--color-div)";
+        counterElement.style.color = "#cd5753";
+        // counter CANT fall past -1000
         if (counter < -1000) {
             counter = -1000;
         }

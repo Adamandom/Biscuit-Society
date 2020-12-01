@@ -1,3 +1,7 @@
+// Script to load the game on click of the start button
+// it also start the MUSIC and starts a TIMER
+// - Adsu
+
 // a script to load the game and delete the intro section
 document.getElementById("start_game").onclick = function() {
     let gameSection = document.getElementsByClassName("game_section")[0];
@@ -6,53 +10,39 @@ document.getElementById("start_game").onclick = function() {
     gameSection.style.display = "grid";
     introSection.style.display = "none";
 
-    // timer
-    clearInterval(Interval);
-    Interval = setInterval(startTimer, 10);
+    // start timer
+    window.clearInterval(interval);
+    interval = window.setInterval(startTimer, 10);
 
     Music.toggle(document.getElementById("music_button"));
     
 } 
 
+// code for timer
+var interval = 0;
 
-
-
-// below is modified code for the stopwatch 
-// credit for the stopwatch: https://www.cssscript.com/a-minimal-pure-javascript-stopwatch/
-
-var Interval;
-
-var tens = 0;
+var milliSeconds = 0;
 var seconds = 0; 
 var minutes = 0; 
 
-var appendSeconds = document.getElementById("seconds");
-var appendMinutes = document.getElementById("minutes");
-
-var buttonStart = document.getElementById('start_game'); // "start game button"
-
-
-function startTimer () {
-        tens++; 
-            
-        if (tens > 99) {
-          seconds++;
-          appendSeconds.innerHTML = "0" + seconds;
-          tens = 0;
-        }
-        
-        if (seconds > 9){
-          appendSeconds.innerHTML = seconds;
-        }
-      
-        if (seconds > 59){
-            minutes++;
-            appendMinutes.innerHTML = minutes;
-            seconds = 0;
-          }
-    
+function startTimer() {
+    milliSeconds++; 
+    // 100ms = 1s
+    if (milliSeconds > 99) {
+      milliSeconds = 0;
+      seconds++;
+      document.getElementById("seconds").innerHTML = "0" + seconds;
+    }
+    // gets rid of formatting 0 (eg: 0:09 -> 0:10)
+    if (seconds > 9) {
+      document.getElementById("seconds").innerHTML = seconds;
+    }
+    // 60s = 1min
+    if (seconds > 59){
+        seconds = 0;
+        minutes++;
+        document.getElementById("minutes").innerHTML = minutes;
       }
-
-// Script to load the game on click of button;
+}
 
 

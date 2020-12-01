@@ -10,7 +10,7 @@
 */
 html {
     font-size: 14px;
-    
+
     --font-title: Grandstander;
     --font-body: Montserrat;
 
@@ -44,7 +44,7 @@ html {
     outline: 0;
     background: none;
     list-style-type: none;
-    cursor: context-menu; 
+    cursor: context-menu;
 }
 
 
@@ -93,11 +93,11 @@ header {
     transition: 300ms;
 }
 
-[alt = RGU] {
+[alt=RGU] {
     filter: hue-rotate(60deg);
 }
 
-[alt = "high contrast toggle"] {
+[alt="high contrast toggle"] {
     filter: hue-rotate(120deg);
 }
 
@@ -239,7 +239,7 @@ label {
     font-size: 8em;
     color: var(--color-dark);
     text-align: center;
-    
+
     font-family: var(--font-title);
     font-weight: var(--weight-bold);
 }
@@ -289,7 +289,8 @@ span {
     height: 4em;
     bottom: 1em;
     right: 2em;
-    z-index: 777; /*top*/
+    z-index: 777;
+    /*top*/
     font-weight: var(--weight-body);
     font-size: 2em;
     color: var(--color-dark);
@@ -297,11 +298,11 @@ span {
     transition: 200ms;
 }
 
-#returnToTop:hover{
+#returnToTop:hover {
     background: var(--color-hovered);
     border-color: var(--color-shadow);
     box-shadow: 0 0 1em var(--color-shadow);
-    
+
 }
 
 
@@ -313,7 +314,8 @@ span {
     opacity: 0;
     left: 0;
     top: 0;
-    z-index: 55555; /* on top */
+    z-index: 55555;
+    /* on top */
     background: var(--color-shadow);
     width: 100%;
     height: 100%;
@@ -330,7 +332,7 @@ span {
     transform: translateX(-50%);
     left: 50%;
     border-radius: var(--rounding-section);
-    
+
 }
 
 #modal_content h1 {

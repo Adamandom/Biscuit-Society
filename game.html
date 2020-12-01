@@ -147,7 +147,7 @@
 
             <div class="next_div">
                 <p><i>Next up...</i></p>
-                <img src="Content/Raster/BiscuitBash/double.svg" alt="next biscuit" class="nextUnlock" id="nextUnlock">
+                <img src="Content/Raster/BiscuitBash/double.png" alt="next biscuit" class="nextUnlock" id="nextUnlock">
 
                 <p style="margin: 2.5em auto 0;">in 50 clicks</p>
             </div>
@@ -155,11 +155,6 @@
 
         <img onclick="Music.toggle(this)" src="Content/Vectors/Misc/Off/music.svg" alt="game music toggle"
             id="music_button">
-
-        <!-- Audio (For... click sound, soundtrack and unlock respectively) -->
-        <audio src=""></audio>
-        <audio id="music" src="Content/Sounds/A Festive Bash.mp3" loop></audio>
-        <audio src=""></audio>
 
     </section>
 
@@ -183,6 +178,18 @@
     <button id="returnToTop" onclick="GoTo.scrollTo(0)">
         To Top
     </button>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer_text">
+            The Biscuit Society website was made by Harry Kellock, Robert Tunn and <span>Adam Sutherland</span>
+        </p>
+    </footer>
+    
+    <!-- Audio (For... click sound, soundtrack and unlock respectively) -->
+    <audio src=""></audio>
+    <audio id="music" src="Content/Sounds/A Festive Bash.mp3" loop></audio>
+    <audio src=""></audio>
 
     <!-- Scripts -->
     <script src="Scripts/Load Game.js"></script>

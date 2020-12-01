@@ -1,5 +1,5 @@
 /* 
-Review Page Stylesheet
+Review Page CSS
 
 This page contains styles specific to the review page
  - Adam
@@ -111,14 +111,12 @@ This page contains styles specific to the review page
 ALTERNATE REVIEW DIVS
     every second review will have inverted colors and the head will appear on the right,
     not the left.
-
-
 */
 
 [alt=altReview] .review_head {
     border-color: var(--color-mid);
     right: 0;
-    box-shadow:#2c090777 -1.25em 0 0.5em;
+    box-shadow: #2c090777 -1.25em 0 0.5em;
     background-color: var(--color-dark);
 }
 

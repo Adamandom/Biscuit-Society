@@ -1,5 +1,6 @@
-
-/* Style for the Home Page */
+/* 
+    Index (home) page CSS 
+*/
 
 .intro_section img {
     height: 40em;
@@ -57,18 +58,18 @@ section p {
 
 /* Alternate layouts for biscuit div */
 
-[alt = "altDiv"] h1 {
+[alt="altDiv"] h1 {
     padding-left: 1.5em;
     text-align: right;
 }
 
-[alt = "altDiv"] p {
+[alt="altDiv"] p {
     text-align: right;
     margin-right: 1.5em;
     float: right;
 }
 
-[alt = "altDiv"] img {
+[alt="altDiv"] img {
     float: left;
     margin-left: 3em;
 }

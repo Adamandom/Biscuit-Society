@@ -1,4 +1,6 @@
-/* style for the contact page */
+/* 
+    Contact Page CSS
+*/
 
 iframe {
     margin: 0;
@@ -22,7 +24,7 @@ iframe:hover {
     background: var(--color-dark);
     border: var(--border-05);
     border-width: 1em;
-    
+
 }
 
 .contact_list_container {
@@ -62,7 +64,6 @@ iframe:hover {
     border-width: 1em;
     overflow: auto;
     border-radius: var(--rounding-div)
-    
 }
 
 .contact_media::-webkit-scrollbar {
